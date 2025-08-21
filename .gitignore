@@ -1,34 +1,14 @@
 # Dependencies
 node_modules/
-.bundle/
 
-# Logs
-npm-debug.log*
-log/
-
-# Temporary files
-tmp/
-*.tmp
-
-# Environment files
-.env
-.env.local
-
-# Build outputs
-env/public/css/app.css
+# Each project's content
+env/public/
+env/views/
+env/app.rb
+env/public/css/*
+# แต่ยกเว้นไฟล์ tailwind.css.template
+!/public/css/tailwind.css.template
 
 # macOS
 .DS_Store
 
-# Editor directories and files
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# User customizable files in env/ - users should create their own
-env/app.rb
-env/public/css/tailwind.css
-
-# Track demo environment for template functionality
-# env/demo/ (commented out to allow tracking)
