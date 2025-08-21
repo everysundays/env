@@ -15,7 +15,7 @@ tmp/
 .env.local
 
 # Build outputs
-public/css/app.css
+env/public/css/app.css
 
 # macOS
 .DS_Store
@@ -26,10 +26,9 @@ public/css/app.css
 *.swp
 *.swo
 
-# User project directory - completely ignored by env.git
-/project/
+# User customizable files in env/ - users should create their own
+env/app.rb
+env/public/css/tailwind.css
 
 # Track demo environment for template functionality
-# demo/ (commented out to allow tracking)
-
-
+# env/demo/ (commented out to allow tracking)
