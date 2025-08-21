@@ -26,9 +26,8 @@ public/css/app.css
 *.swp
 *.swo
 
-# User customizable files - users should create their own
-app.rb
-public/css/tailwind.css
+# User project directory - completely ignored by env.git
+/project/
 
 # Track demo environment for template functionality
 # demo/ (commented out to allow tracking)
