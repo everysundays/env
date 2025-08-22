@@ -28,6 +28,7 @@ end
 # DaisyUI demo page with enhanced highlighting
 get "/daisyui" do
   @page_title = "DaisyUI Components Demo"
+  @get_styles = ["/demo/css/demo.css"]
   erb :daisyui
 end
 
@@ -36,6 +37,16 @@ get "/demo/css/*" do
   file_path = File.join(__dir__, "demo/css", params["splat"].first)
   if File.exist?(file_path)
     content_type :css
+    send_file file_path
+  else
+    halt 404
+  end
+end
+
+get "/demo/js/*" do
+  file_path = File.join(__dir__, "demo/js", params["splat"].first)
+  if File.exist?(file_path)
+    content_type 'application/javascript'
     send_file file_path
   else
     halt 404

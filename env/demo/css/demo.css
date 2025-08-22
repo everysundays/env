@@ -1,6 +1,9 @@
 /* 
- * Demo Styles for Rack & Rail Grid System
- * Contains semantic typography foundations and demo column styling only
+ * PSP Demo Styles
+ * Contains demo-specific styling that DOES NOT override @psp/layout system
+ * - Typography foundations
+ * - Grid demo column styling
+ * - Interactive demo features
  */
 
 /* ================================
@@ -82,4 +85,26 @@ section {
 .rail > [class*="col-"] > span {
   font-size: 0.875rem;
   color: #1e40af;
+}
+
+/* ================================
+   INTERACTIVE DEMO FEATURES
+   ================================ */
+
+/* Badge highlighting system - uses DaisyUI warning colors */
+.tag-highlight {
+  background: oklch(var(--color-warning));
+  color: oklch(var(--color-warning-content));
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px oklch(var(--color-warning) / 0.3);
+}
+
+/* Demo-specific visual indicators (non-layout) */
+.demo-visual-indicator {
+  transition: all 0.2s ease;
+}
+
+.demo-visual-indicator:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
