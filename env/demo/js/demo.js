@@ -11,18 +11,20 @@ function highlightTags(componentElement, tagIds) {
   // Remove all existing highlights and restore ghost state
   document.querySelectorAll('.badge').forEach(badge => {
     badge.classList.remove('badge-warning');
+    badge.classList.remove('tag-highlight');
     if (!badge.classList.contains('badge-ghost')) {
       badge.classList.add('badge-ghost');
     }
   });
 
-  // Highlight relevant tags
+  // Highlight relevant tags using both old and new methods
   if (tagIds && tagIds.length > 0) {
     tagIds.forEach(tagId => {
       const tag = document.getElementById(tagId);
       if (tag) {
         tag.classList.remove('badge-ghost');
         tag.classList.add('badge-warning');
+        tag.classList.add('tag-highlight');
       }
     });
   }
@@ -31,6 +33,7 @@ function highlightTags(componentElement, tagIds) {
 function clearHighlights() {
   document.querySelectorAll('.badge').forEach(badge => {
     badge.classList.remove('badge-warning');
+    badge.classList.remove('tag-highlight');
     // Restore original badge colors - all use badge-ghost for subtle appearance
     if (!badge.classList.contains('badge-ghost')) {
       badge.classList.add('badge-ghost');

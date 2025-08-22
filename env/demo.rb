@@ -10,12 +10,13 @@ set :views, File.join(__dir__, "demo/views")
 # Demo homepage - Framework versions showcase
 get "/" do
   @page_title = "PSP Template Demo"
+  @get_styles = ["/demo/css/demo.css"]
   erb :index
 end
 
 # Grid demo page
 get "/grid" do
-  @page_title = "Grid Demo"
+  @page_title = "Grid System Demo"
   @get_styles = [
     "/npm/@psp-asia/layout/grid.css", 
     "/demo/css/demo.css",

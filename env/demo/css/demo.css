@@ -88,23 +88,88 @@ section {
 }
 
 /* ================================
+   DEMO PAGE LAYOUT STRUCTURE  
+   ================================ */
+
+/* Consistent page wrapper for all demo pages */
+.demo-page {
+  min-height: 100vh;
+  background: oklch(var(--color-base-200));
+}
+
+/* Demo page header styling */
+.demo-header {
+  background: oklch(var(--color-base-100));
+  box-shadow: 0 1px 3px oklch(var(--color-base-300) / 0.12);
+  border-bottom: 1px solid oklch(var(--color-base-300));
+}
+
+/* Demo content sections */
+.demo-section {
+  margin-bottom: 3rem;
+}
+
+.demo-section h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Demo badge container styling */
+.demo-badge-container {
+  margin-bottom: 0.75rem;
+}
+
+.demo-badge-group {
+  display: flex;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.demo-description {
+  font-size: 0.75rem;
+  opacity: 0.6;
+  margin-bottom: 0.5rem;
+}
+
+/* Demo code preview styling */
+.demo-code-preview {
+  background: oklch(var(--color-base-300));
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+  border: 1px solid oklch(var(--color-base-200));
+  box-shadow: 0 10px 15px -3px oklch(var(--color-base-300) / 0.1);
+}
+
+.demo-code-preview pre {
+  margin: 0;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* ================================
    INTERACTIVE DEMO FEATURES
    ================================ */
 
 /* Badge highlighting system - uses DaisyUI warning colors */
 .tag-highlight {
-  background: oklch(var(--color-warning));
-  color: oklch(var(--color-warning-content));
+  background: oklch(var(--color-warning)) !important;
+  color: oklch(var(--color-warning-content)) !important;
   transform: scale(1.05);
   box-shadow: 0 2px 8px oklch(var(--color-warning) / 0.3);
 }
 
-/* Demo-specific visual indicators (non-layout) */
-.demo-visual-indicator {
+/* Demo hover effects */
+.demo-hover {
   transition: all 0.2s ease;
 }
 
-.demo-visual-indicator:hover {
+.demo-hover:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px oklch(var(--color-base-300) / 0.15);
 }

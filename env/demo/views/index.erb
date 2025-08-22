@@ -1,46 +1,70 @@
-<section class="hero bg-base-200">
-  <div class="hero-content text-center">
-    <div class="max-w-4xl">
-      <h1 class="text-6xl font-bold mb-6">PSP Dev Template</h1>
-      <p class="text-xl mb-12">Build faster with Tailwind CSS + daisyUI + Sinatra.</p>
+<div class="demo-page">
+  <!-- Header -->
+  <div class="demo-header">
+    <section class="hero bg-base-200 py-16">
+      <div class="hero-content text-center">
+        <div class="max-w-4xl">
+          <h1 class="text-6xl font-bold mb-6">PSP Dev Template</h1>
+          <p class="text-xl mb-6">Build faster with <span id="tag-tailwind" class="badge badge-ghost badge-sm">Tailwind CSS</span> + <span id="tag-daisyui" class="badge badge-ghost badge-sm">DaisyUI</span> + <span id="tag-sinatra" class="badge badge-ghost badge-sm">Sinatra</span>.</p>
+          
+          <div class="alert alert-success demo-hover">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+            </svg>
+            <span>Complete development environment ready to use</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 
-      <!-- Framework Versions Card -->
-      <div class="card bg-base-100 shadow-xl max-w-2xl mx-auto">
+  <main class="container mx-auto px-6 py-8">
+    <!-- Framework Versions Section -->
+    <section class="demo-section">
+      <div class="demo-badge-container">
+        <div class="demo-badge-group">
+          <span id="tag-framework" class="badge badge-ghost badge-sm">frameworks</span>
+          <span id="tag-versions" class="badge badge-ghost badge-sm">versions</span>
+        </div>
+        <div class="demo-description">Current framework versions used in this template</div>
+      </div>
+
+      <div class="card bg-base-100 shadow-xl max-w-4xl mx-auto demo-hover" data-highlight-tags="tag-framework,tag-versions">
         <div class="card-body">
           <h2 class="card-title justify-center mb-6">Framework Versions</h2>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
-            <div class="stat">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
+            <div class="stat demo-hover" data-highlight-tags="tag-sinatra">
               <div class="stat-title">Backend</div>
               <div class="stat-value text-2xl text-primary">Sinatra</div>
               <div class="stat-desc">v4.1.1</div>
             </div>
 
-            <div class="stat">
+            <div class="stat demo-hover" data-highlight-tags="tag-framework">
               <div class="stat-title">Runtime</div>
               <div class="stat-value text-2xl text-secondary">Ruby</div>
               <div class="stat-desc">v3.2.8</div>
             </div>
 
-            <div class="stat">
+            <div class="stat demo-hover" data-highlight-tags="tag-tailwind">
               <div class="stat-title">CSS Framework</div>
               <div class="stat-value text-2xl text-accent">Tailwind CSS</div>
               <div class="stat-desc">v4.1.12</div>
             </div>
 
-            <div class="stat">
+            <div class="stat demo-hover" data-highlight-tags="tag-daisyui">
               <div class="stat-title">UI Components</div>
               <div class="stat-value text-2xl text-info">DaisyUI</div>
               <div class="stat-desc">v5.0.50</div>
             </div>
 
-            <div class="stat">
+            <div class="stat demo-hover" data-highlight-tags="tag-framework">
               <div class="stat-title">Layout System</div>
               <div class="stat-value text-2xl text-success">@psp/layout</div>
               <div class="stat-desc">v1.0.0</div>
             </div>
 
-            <div class="stat">
+            <div class="stat demo-hover" data-highlight-tags="tag-framework">
               <div class="stat-title">Debug Tools</div>
               <div class="stat-value text-2xl text-warning">@psp/debug</div>
               <div class="stat-desc">v1.0.0</div>
@@ -48,6 +72,6 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
+  </main>
+</div>
