@@ -37,6 +37,7 @@ body {
   line-height: 1.6;
   font-size: var(--font-size-base);
   color: oklch(var(--color-base-content));
+  padding-top: 4rem; /* Add padding for fixed navbar */
 }
 
 /* Typography hierarchy using DaisyUI font sizes */
@@ -203,7 +204,12 @@ code {
 
 /* Demo content sections */
 .demo-section {
-  margin-bottom: 3rem;
+  margin-bottom: 5rem; /* Increased spacing between different topics */
+}
+
+/* First section gets extra top margin after hero */
+.demo-section:first-child {
+  margin-top: 2rem;
 }
 
 .demo-section h2 {
@@ -289,4 +295,55 @@ code {
 .demo-hover:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 25px oklch(var(--color-base-300) / 0.15);
+}
+
+/* ================================
+   DEBUG MODE DARK MODE FIXES
+   ================================ */
+
+/* Fix debug-mode text colors for dark mode compatibility */
+.viewport-input.viewport-input-rem {
+  color: oklch(var(--color-base-content)) !important;
+}
+
+.viewport-option {
+  color: oklch(var(--color-base-content)) !important;
+}
+
+.viewport-option.default-option {
+  color: oklch(var(--color-base-content)) !important;
+}
+
+.viewport-dropdown-menu {
+  background: oklch(var(--color-base-100)) !important;
+  border-color: oklch(var(--color-base-300)) !important;
+}
+
+.viewport-input {
+  background-color: oklch(var(--color-base-100)) !important;
+  color: oklch(var(--color-base-content)) !important;
+  border-color: oklch(var(--color-base-300)) !important;
+}
+
+/* Fix debug inspector tooltip - ensure white text on black background */
+.debug-inspector-tooltip {
+  color: white !important;
+  background-color: rgba(15, 23, 42, 0.9) !important;
+}
+
+.debug-inspector-tooltip * {
+  color: white !important;
+}
+
+.debug-inspector-tooltip .tooltip-tag {
+  color: #93c5fd !important; /* Keep blue color for tag */
+}
+
+/* White background for debug mode measurement tablets */
+.viewport-input,
+.viewport-input.viewport-input-rem {
+  background-color: white !important;
+  color: #374151 !important;
+  border: 1px solid #d1d5db !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) !important;
 }

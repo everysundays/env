@@ -29,11 +29,22 @@ end
 # DaisyUI demo page with enhanced highlighting
 get "/daisyui" do
   @page_title = "DaisyUI Components Demo"
-  @get_styles = ["/demo/css/demo.css"]
+  @get_styles = [
+    "/npm/@psp-asia/layout/grid.css",
+    "/demo/css/demo.css",
+    "/npm/@psp-asia/debug-mode/debug-mode.css"
+  ]
+  @get_scripts = ["/npm/@psp-asia/debug-mode/debug-mode.js"]
+
   erb :daisyui
 end
 
 # Demo asset serving - CSS, JS, and other assets from demo/
+get "/demo.css" do
+  content_type :css
+  send_file File.join(__dir__, "demo/css/demo.css")
+end
+
 get "/demo/css/*" do
   file_path = File.join(__dir__, "demo/css", params["splat"].first)
   if File.exist?(file_path)
