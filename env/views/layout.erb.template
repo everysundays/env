@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title><%= @page_title ? "#{@page_title} · Your App" : "Your App" %></title>
-    <link rel="stylesheet" href="/css/tailwind.css" />
+    <link rel="stylesheet" href="/css/app.css" />
     <% (@get_styles || []).each do |href| %>
       <link rel="stylesheet" href="<%= href %>" />
     <% end %>
