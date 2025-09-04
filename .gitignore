@@ -1,10 +1,11 @@
 # Dependencies
-node_modules/
+env/node_modules/
 
-# Protect ONLY user-created project files from being overwritten
-# (Templates, demo/, and public/ should be updated with new environment)
+# User-created files that should NOT be overwritten
+env/public/css/*.css
+env/public/img/
 env/views/contact.erb
-env/views/footer.erb  
+env/views/footer.erb
 env/views/head.erb
 env/views/index.erb
 env/views/layout.erb
