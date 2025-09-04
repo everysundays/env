@@ -1,13 +1,14 @@
 # Dependencies
 node_modules/
 
-# Each project's content
+# No project's content
 env/public/
+!env/public/css/app.css
+!env/public/css/colors.css
+!env/public/css/input.css
+!env/public/css/typography.css
 env/views/
 env/app.rb
-env/public/css/*
-# แต่ยกเว้นไฟล์ tailwind.css.template
-!/public/css/tailwind.css.template
 
 # macOS
 .DS_Store

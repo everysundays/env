@@ -5,76 +5,46 @@
 require "sinatra"
 
 set :public_folder, File.join(__dir__, "public")
-set :views, File.join(__dir__, "demo/views")
+set :views, File.join(__dir__, "demo")
+
+# Disable caching for development
+configure :development do
+  set :static_cache_control, [:public, :no_cache, :no_store, :must_revalidate]
+end
 
 # Demo homepage - Framework versions showcase
 get "/" do
   @page_title = "PSP Template Demo"
-  @get_styles = ["/demo/css/demo.css"]
+  @get_styles = ["/css/app.css", "/demo/demo.css"]
+  @get_scripts = ["/demo/demo.js"]
   erb :index
 end
 
 # Grid demo page
 get "/grid" do
   @page_title = "Grid System Demo"
-  @get_styles = [
-    "/npm/@psp-asia/layout/grid.css", 
-    "/demo/css/demo.css",
-    "/npm/@psp-asia/debug-mode/debug-mode.css"
-  ]
-  @get_scripts = ["/npm/@psp-asia/debug-mode/debug-mode.js"]
+  @get_styles = ["/css/app.css", "/demo/demo.css", "node_modules/@psp-asia/layout/debug.css"]
+  @get_scripts = ["/demo/demo.js", "node_modules/@psp-asia/layout/debug.js"]
   erb :grid
 end
 
 # DaisyUI demo page with enhanced highlighting
 get "/daisyui" do
   @page_title = "DaisyUI Components Demo"
-  @get_styles = [
-    "/npm/@psp-asia/layout/grid.css",
-    "/demo/css/demo.css",
-    "/npm/@psp-asia/debug-mode/debug-mode.css"
-  ]
-  @get_scripts = ["/npm/@psp-asia/debug-mode/debug-mode.js"]
-
+  @get_styles = ["/css/app.css", "/demo/demo.css", "node_modules/@psp-asia/layout/debug.css"]
+  @get_scripts = ["/demo/demo.js", "node_modules/@psp-asia/layout/debug.js"]
   erb :daisyui
 end
 
-# Demo asset serving - CSS, JS, and other assets from demo/
-get "/demo.css" do
+# Serve debug files from node_modules for development
+get "/node_modules/@psp-asia/layout/debug.css" do
   content_type :css
-  send_file File.join(__dir__, "demo/css/demo.css")
+  send_file File.join(__dir__, "node_modules", "@psp-asia", "layout", "debug.css")
 end
 
-get "/demo/css/*" do
-  file_path = File.join(__dir__, "demo/css", params["splat"].first)
-  if File.exist?(file_path)
-    content_type :css
-    send_file file_path
-  else
-    halt 404
-  end
+get "/node_modules/@psp-asia/layout/debug.js" do
+  content_type 'application/javascript'
+  send_file File.join(__dir__, "node_modules", "@psp-asia", "layout", "debug.js")
 end
 
-get "/demo/js/*" do
-  file_path = File.join(__dir__, "demo/js", params["splat"].first)
-  if File.exist?(file_path)
-    content_type 'application/javascript'
-    send_file file_path
-  else
-    halt 404
-  end
-end
 
-# Serve selected node_modules resources under /npm/* 
-# Map export names to actual file paths
-get "/npm/@psp-asia/debug-mode/debug-mode.css" do
-  send_file File.join(__dir__, "node_modules", "@psp-asia", "debug-mode", "styles", "debug-mode.css")
-end
-
-get "/npm/@psp-asia/debug-mode/debug-mode.js" do
-  send_file File.join(__dir__, "node_modules", "@psp-asia", "debug-mode", "scripts", "debug-mode.js")
-end
-
-get "/npm/@psp-asia/layout/grid.css" do
-  send_file File.join(__dir__, "node_modules", "@psp-asia", "layout", "grid.css")
-end
