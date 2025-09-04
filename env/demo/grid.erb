@@ -1,0 +1,156 @@
+<header class="hero bg-base-200">
+  <div class="hero-content text-center">
+    <div>
+      <h1 class="text-4xl font-bold">Grid System Demo</h1>
+      <p class="text-lg">A responsive grid system with two container types: <span class="text-primary font-semibold">Rack</span> (end-to-end columns that wrap) and <span class="text-secondary font-semibold">Rail</span> (horizontally scrollable rows).</p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="flex flex-wrap">
+      <span class="badge badge-primary">rack</span>
+      <span class="badge badge-primary">col-*</span>
+    </div>
+    <p class="text-base-content/70">Responsive grid container with automatic wrapping columns</p>
+    
+    <h2 class="text-2xl font-semibold">Rack Container</h2>
+    <pre class="mockup-code"><code>&lt;div class="rack"&gt;
+  &lt;div class="col-1"&gt;col-1&lt;/div&gt;
+  &lt;div class="col-2"&gt;col-2&lt;/div&gt;
+  &lt;div class="col-3"&gt;col-3&lt;/div&gt;
+  &lt;div class="col-4"&gt;col-4&lt;/div&gt;
+  ...
+&lt;/div&gt;</code></pre>
+
+    <div class="rack">
+      <% (1..12).each do |i| %>
+        <div class="col-<%= i %> bg-primary text-primary-content rounded">
+          <span class="block text-center">col-<%= i %></span>
+        </div>
+      <% end %>
+    </div>
+  </section>
+
+  <section>
+    <div class="flex flex-wrap">
+      <span class="badge badge-secondary">rail</span>
+      <span class="badge badge-secondary">horizontal-scroll</span>
+    </div>
+    <p class="text-base-content/70">Horizontal scrolling grid container for wide content</p>
+    
+    <h2 class="text-2xl font-semibold">Rail Container</h2>
+    <pre class="mockup-code"><code>&lt;div class="rail"&gt;
+  &lt;div class="col-1"&gt;col-1&lt;/div&gt;
+  &lt;div class="col-2"&gt;col-2&lt;/div&gt;
+  &lt;div class="col-3"&gt;col-3&lt;/div&gt;
+  &lt;div class="col-4"&gt;col-4&lt;/div&gt;
+  ...
+&lt;/div&gt;</code></pre>
+
+    <div class="rail">
+      <% (1..12).each do |i| %>
+        <div class="col-<%= i %> bg-secondary text-secondary-content rounded">
+          <span class="block text-center">col-<%= i %></span>
+        </div>
+      <% end %>
+    </div>
+  </section>
+
+  <section>
+    <div class="flex flex-wrap">
+      <span class="badge badge-accent">offset-*</span>
+      <span class="badge badge-accent">positioning</span>
+    </div>
+    <p class="text-base-content/70">Semantic grid positioning with offset classes</p>
+    
+    <h2 class="text-2xl font-semibold">Positioning with Semantic Offsets</h2>
+    <p class="text-base-content/70">Position columns with <code class="kbd kbd-sm">offset-N</code> + <code class="kbd kbd-sm">col-M</code> classes.</p>
+    
+    <div class="rack">
+      <div class="offset-3 col-2 bg-accent text-accent-content rounded text-center"><span>offset-3 + col-2</span></div>
+      <div class="col-4 bg-info text-info-content rounded text-center"><span>col-4</span></div>
+      <div class="col-4 bg-info text-info-content rounded text-center"><span>col-4</span></div>
+
+      <div class="offset-1 col-2 bg-accent text-accent-content rounded text-center"><span>offset-1 + col-2</span></div>
+      <div class="col-9 bg-info text-info-content rounded text-center"><span>col-9</span></div>
+    
+      <div class="offset-2 col-3 bg-accent text-accent-content rounded text-center"><span>offset-2 + col-3</span></div>
+      <div class="col-7 bg-info text-info-content rounded text-center"><span>col-7</span></div>
+    
+      <div class="offset-3 col-3 bg-accent text-accent-content rounded text-center"><span>offset-3 + col-3</span></div>
+      <div class="col-6 bg-info text-info-content rounded text-center"><span>col-6</span></div>
+    
+      <div class="offset-1 col-4 bg-accent text-accent-content rounded text-center"><span>offset-1 + col-4</span></div>
+      <div class="col-7 bg-info text-info-content rounded text-center"><span>col-7</span></div>
+    
+      <div class="offset-2 col-2 bg-accent text-accent-content rounded text-center"><span>offset-2 + col-2</span></div>
+      <div class="col-8 bg-info text-info-content rounded text-center"><span>col-8</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="flex flex-wrap">
+      <span class="badge badge-success">responsive</span>
+      <span class="badge badge-success">layout-patterns</span>
+    </div>
+    <p class="text-base-content/70">Common responsive layout patterns using rack container</p>
+    
+    <h2 class="text-2xl font-semibold">Responsive Layout Examples</h2>
+
+    <div class="rack">
+      <%
+        # Define responsive demo layout pattern
+        demo_cols = [
+          [2, 8, 2],
+          [12],
+          [6, 6],
+          [4, 4, 4],
+          [3, 3, 3, 3],
+          [8, 4],
+          [9, 3],
+          [2, 10],
+          [3, 6, 3],
+          [2, 4, 6],
+          [2, 4],
+          [1, 6, 2, 3]
+        ]
+      %>
+      
+      <% demo_cols.each_with_index do |row, i| %>
+        <% row.each do |col_size| %>
+          <div class="col-<%= col_size %> bg-success text-success-content rounded text-center">
+            <span>col-<%= col_size %></span>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </section>
+
+  <section>
+    <div class="flex flex-wrap">
+      <span class="badge badge-warning">centered</span>
+      <span class="badge badge-warning">alignment</span>
+    </div>
+    <p class="text-base-content/70">Centering elements using semantic offset calculations</p>
+    
+    <h2 class="text-2xl font-semibold">Centered Positioning Examples</h2>
+    <p class="text-base-content/70">Each example shows different column sizes centered within the 12-column grid using calculated offsets.</p>
+
+    <div class="rack">
+      <div class="col-12 bg-warning text-warning-content rounded text-center"><span>col-12 (full width)</span></div>
+      <div class="offset-1 col-11 bg-warning text-warning-content rounded text-center"><span>offset-1 + col-11</span></div>
+      <div class="offset-2 col-10 bg-warning text-warning-content rounded text-center"><span>offset-2 + col-10</span></div>
+      <div class="offset-3 col-9 bg-warning text-warning-content rounded text-center"><span>offset-3 + col-9</span></div>
+      <div class="offset-4 col-8 bg-warning text-warning-content rounded text-center"><span>offset-4 + col-8</span></div>
+      <div class="offset-5 col-7 bg-warning text-warning-content rounded text-center"><span>offset-5 + col-7</span></div>
+      <div class="offset-6 col-6 bg-warning text-warning-content rounded text-center"><span>offset-6 + col-6</span></div>
+      <div class="offset-7 col-5 bg-warning text-warning-content rounded text-center"><span>offset-7 + col-5</span></div>
+      <div class="offset-8 col-4 bg-warning text-warning-content rounded text-center"><span>offset-8 + col-4</span></div>
+      <div class="offset-9 col-3 bg-warning text-warning-content rounded text-center"><span>offset-9 + col-3</span></div>
+      <div class="offset-10 col-2 bg-warning text-warning-content rounded text-center"><span>offset-10 + col-2</span></div>
+      <div class="offset-11 col-1 bg-warning text-warning-content rounded text-center"><span>offset-11 + col-1</span></div>
+    </div>
+  </section>
+</main>

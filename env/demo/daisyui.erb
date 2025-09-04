@@ -1,0 +1,902 @@
+<header class="hero bg-base-200 py-20">
+  <div class="hero-content text-center">
+    <div class="max-w-2xl">
+      <h1 class="h1 mb-6">DaisyUI Components</h1>
+      <p class="mb-8">Complete showcase organized by Atomic Design principles</p>
+      <p class="opacity-75">Progressive complexity: Atoms → Molecules → Organisms → Templates</p>
+    </div>
+  </div>
+</header>
+
+<!-- Quick Navigation -->
+<nav class="bg-base-100 border-b border-base-200 sticky top-0 z-50">
+  <div class="rack py-4">
+    <div class="col-12">
+      <ul class="flex flex-wrap gap-6 justify-center">
+        <li><a href="#atoms" class="btn btn-ghost btn-sm">Atoms</a></li>
+        <li><a href="#molecules" class="btn btn-ghost btn-sm">Molecules</a></li>
+        <li><a href="#organisms" class="btn btn-ghost btn-sm">Organisms</a></li>
+        <li><a href="#templates" class="btn btn-ghost btn-sm">Templates</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="py-12">
+
+<!-- ==================== ATOMS - Basic Building Blocks ==================== -->
+<section id="atoms" class="mb-24">
+  <div class="text-center mb-12">
+    <h2 class="h2 mb-4">Atoms</h2>
+    <p class="text-lg opacity-75">Basic building blocks - Typography, Buttons, Form Inputs, Icons & Basic Shapes</p>
+  </div>
+
+  <!-- Typography -->
+  <div class="mb-12">
+    <h3 class="h3 mb-6">Typography</h3>
+    <div class="rack">
+      <div class="col-6">
+        <div class="flex flex-col gap-3">
+          <h1>H1 - Main heading style</h1>
+          <h2>H2 - Section heading style</h2>
+          <h3>H3 - Subsection heading style</h3>
+          <h4>H4 - Component heading style</h4>
+          <h5>H5 - Small heading style</h5>
+          <h6>H6 - Micro heading style</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Buttons -->
+  <div class="mb-12">
+    <h3 class="h3 mb-6">Buttons</h3>
+    
+    <!-- Colors -->
+    <div class="rack mb-8">
+      <div class="col-6">
+        <h4 class="text-lg font-semibold mb-4">Colors</h4>
+        <div class="flex flex-wrap gap-2">
+          <button class="btn">Default</button>
+          <button class="btn btn-primary">Primary</button>
+          <button class="btn btn-secondary">Secondary</button>
+          <button class="btn btn-accent">Accent</button>
+          <button class="btn btn-neutral">Neutral</button>
+          <button class="btn btn-info">Info</button>
+          <button class="btn btn-success">Success</button>
+          <button class="btn btn-warning">Warning</button>
+          <button class="btn btn-error">Error</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Variants -->
+    <div class="rack mb-8">
+      <div class="col-6">
+        <h4 class="text-lg font-semibold mb-4">Variants</h4>
+        <div class="flex flex-wrap gap-2">
+          <button class="btn btn-ghost">Ghost</button>
+          <button class="btn btn-link">Link</button>
+          <button class="btn btn-outline">Outline</button>
+          <button class="btn btn-outline btn-primary">Outline Primary</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sizes & Shapes -->
+    <div class="rack">
+      <div class="col-3">
+        <h4 class="text-lg font-semibold mb-4">Sizes</h4>
+        <div class="flex flex-wrap gap-2">
+          <button class="btn btn-xs">XS</button>
+          <button class="btn btn-sm">SM</button>
+          <button class="btn">MD</button>
+          <button class="btn btn-lg">LG</button>
+        </div>
+      </div>
+      <div class="col-3">
+        <h4 class="text-lg font-semibold mb-4">Shapes</h4>
+        <div class="flex flex-wrap gap-2">
+          <button class="btn btn-square">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+          </button>
+          <button class="btn btn-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+          </button>
+          <button class="btn btn-wide">Wide</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Form Inputs -->
+  <div class="mb-12">
+    <h3 class="h3 mb-6">Form Inputs</h3>
+    
+    <!-- Text Inputs -->
+    <div class="rack mb-8">
+      <div class="col-4">
+        <h4 class="text-lg font-semibold mb-4">Text Input</h4>
+        <div class="space-y-3">
+          <input type="text" placeholder="Default" class="input input-bordered w-full" />
+          <input type="text" placeholder="Primary" class="input input-bordered input-primary w-full" />
+          <input type="text" placeholder="Success" class="input input-bordered input-success w-full" />
+        </div>
+      </div>
+      <div class="col-4">
+        <h4 class="text-lg font-semibold mb-4">Textarea</h4>
+        <div class="space-y-3">
+          <textarea class="textarea textarea-bordered w-full" placeholder="Enter text"></textarea>
+          <textarea class="textarea textarea-bordered textarea-primary w-full" placeholder="Primary style"></textarea>
+        </div>
+      </div>
+      <div class="col-4">
+        <h4 class="text-lg font-semibold mb-4">Select</h4>
+        <div class="space-y-3">
+          <select class="select select-bordered w-full">
+            <option>Choose option</option>
+            <option>Option 1</option>
+            <option>Option 2</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form Controls -->
+    <div class="rack mb-8">
+      <div class="col-4">
+        <h4 class="text-lg font-semibold mb-4">Checkbox</h4>
+        <div class="space-y-3">
+          <div class="form-control">
+            <label class="label cursor-pointer justify-start gap-2">
+              <input type="checkbox" class="checkbox" />
+              <span class="label-text">Default checkbox</span>
+            </label>
+          </div>
+          <div class="flex gap-2">
+            <input type="checkbox" class="checkbox checkbox-primary" checked />
+            <input type="checkbox" class="checkbox checkbox-secondary" />
+            <input type="checkbox" class="checkbox checkbox-accent" />
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <h4 class="text-lg font-semibold mb-4">Radio</h4>
+        <div class="space-y-3">
+          <div class="form-control">
+            <label class="label cursor-pointer justify-start gap-2">
+              <input type="radio" name="radio-demo" class="radio" checked />
+              <span class="label-text">Option 1</span>
+            </label>
+          </div>
+          <div class="form-control">
+            <label class="label cursor-pointer justify-start gap-2">
+              <input type="radio" name="radio-demo" class="radio" />
+              <span class="label-text">Option 2</span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <h4 class="text-lg font-semibold mb-4">Toggle</h4>
+        <div class="space-y-3">
+          <input type="checkbox" class="toggle" checked />
+          <input type="checkbox" class="toggle toggle-primary" />
+          <input type="checkbox" class="toggle toggle-secondary" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Advanced Inputs -->
+    <div class="rack">
+      <div class="col-4">
+        <h4 class="text-lg font-semibold mb-4">Range</h4>
+        <div class="space-y-3">
+          <input type="range" min="0" max="100" value="50" class="range range-primary" />
+          <input type="range" min="0" max="100" value="75" class="range range-secondary" />
+        </div>
+      </div>
+      <div class="col-4">
+        <h4 class="text-lg font-semibold mb-4">File Input</h4>
+        <input type="file" class="file-input file-input-bordered w-full" />
+      </div>
+      <div class="col-4">
+        <h4 class="text-lg font-semibold mb-4">Rating</h4>
+        <div class="rating">
+          <input type="radio" name="rating-atoms" class="mask mask-star-2 bg-orange-400" />
+          <input type="radio" name="rating-atoms" class="mask mask-star-2 bg-orange-400" checked />
+          <input type="radio" name="rating-atoms" class="mask mask-star-2 bg-orange-400" />
+          <input type="radio" name="rating-atoms" class="mask mask-star-2 bg-orange-400" />
+          <input type="radio" name="rating-atoms" class="mask mask-star-2 bg-orange-400" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Icons & Indicators -->
+  <div class="mb-12">
+    <h3 class="h3 mb-6">Icons & Indicators</h3>
+    <div class="rack">
+      <div class="col-4">
+        <h4 class="text-lg font-semibold mb-4">Badge</h4>
+        <div class="space-y-3">
+          <div class="flex gap-2">
+            <div class="badge">default</div>
+            <div class="badge badge-primary">primary</div>
+            <div class="badge badge-secondary">secondary</div>
+            <div class="badge badge-accent">accent</div>
+          </div>
+          <div class="flex gap-2">
+            <div class="badge badge-outline">outline</div>
+            <div class="badge badge-ghost">ghost</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <h4 class="text-lg font-semibold mb-4">Loading</h4>
+        <div class="flex gap-3">
+          <span class="loading loading-spinner loading-xs"></span>
+          <span class="loading loading-spinner loading-sm"></span>
+          <span class="loading loading-spinner loading-md"></span>
+          <span class="loading loading-spinner loading-lg"></span>
+        </div>
+      </div>
+      <div class="col-4">
+        <h4 class="text-lg font-semibold mb-4">Keyboard</h4>
+        <div class="flex gap-1">
+          <kbd class="kbd kbd-sm">Cmd</kbd>
+          <kbd class="kbd kbd-sm">K</kbd>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Basic Shapes -->
+  <div class="mb-12">
+    <h3 class="h3 mb-6">Basic Shapes</h3>
+    <div class="rack">
+      <div class="col-6">
+        <h4 class="text-lg font-semibold mb-4">Avatar</h4>
+        <div class="flex gap-4">
+          <div class="avatar">
+            <div class="w-16 rounded-full">
+              <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Avatar" />
+            </div>
+          </div>
+          <div class="avatar online">
+            <div class="w-16 rounded-full">
+              <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Online Avatar" />
+            </div>
+          </div>
+          <div class="avatar offline">
+            <div class="w-16 rounded-full">
+              <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="Offline Avatar" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <h4 class="text-lg font-semibold mb-4">Masks</h4>
+        <div class="flex gap-3">
+          <img class="mask mask-squircle w-16" src="https://daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.jpg" alt="Square mask" />
+          <img class="mask mask-heart w-16" src="https://daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.jpg" alt="Heart mask" />
+          <img class="mask mask-hexagon w-16" src="https://daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.jpg" alt="Hexagon mask" />
+          <img class="mask mask-triangle w-16" src="https://daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.jpg" alt="Triangle mask" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== MOLECULES - Simple Combinations ==================== -->
+<section id="molecules" class="mb-24">
+  <div class="text-center mb-12">
+    <h2 class="h2 mb-4">Molecules</h2>
+    <p class="text-lg opacity-75">Simple combinations - Input Groups, Cards, Progress Components, Stats & Menu Items</p>
+  </div>
+
+  <!-- Input Groups -->
+  <div class="mb-12">
+    <h3 class="h3 mb-6">Input Groups</h3>
+    <div class="rack">
+      <div class="col-6">
+        <div class="space-y-4">
+          <div class="join">
+            <input class="input input-bordered join-item" placeholder="Search..." />
+            <button class="btn join-item btn-primary">Go</button>
+          </div>
+          <div class="join">
+            <button class="btn join-item">Button</button>
+            <button class="btn join-item btn-active">Active</button>
+            <button class="btn join-item">Button</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card Components -->
+  <div class="mb-12">
+    <h3 class="h3 mb-6">Card Components</h3>
+    <div class="rack">
+      <div class="col-4">
+        <div class="card bg-base-100 shadow-lg">
+          <figure class="h-48">
+            <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Product" class="w-full h-full object-cover" />
+          </figure>
+          <div class="card-body">
+            <h4 class="card-title">Product Title</h4>
+            <p>Brief product description goes here.</p>
+            <div class="card-actions justify-end">
+              <button class="btn btn-primary btn-sm">Buy Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card bg-base-100 shadow-lg">
+          <div class="card-body">
+            <h4 class="card-title">Text Card</h4>
+            <p>Simple card with just text content and actions.</p>
+            <div class="card-actions justify-end">
+              <button class="btn btn-outline btn-sm">Learn More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Progress Components -->
+  <div class="mb-12">
+    <h3 class="h3 mb-6">Progress Components</h3>
+    <div class="rack">
+      <div class="col-6">
+        <h4 class="text-lg font-semibold mb-4">Progress Bars</h4>
+        <div class="space-y-3">
+          <progress class="progress progress-primary w-full" value="25" max="100"></progress>
+          <progress class="progress progress-secondary w-full" value="50" max="100"></progress>
+          <progress class="progress progress-success w-full" value="75" max="100"></progress>
+        </div>
+      </div>
+      <div class="col-6">
+        <h4 class="text-lg font-semibold mb-4">Radial Progress</h4>
+        <div class="flex gap-4">
+          <div class="radial-progress text-primary" style="--value:25;" role="progressbar">25%</div>
+          <div class="radial-progress text-secondary" style="--value:50;" role="progressbar">50%</div>
+          <div class="radial-progress text-success" style="--value:75;" role="progressbar">75%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="mb-12">
+    <h3 class="h3 mb-6">Stats Display</h3>
+    <div class="rack">
+      <div class="col-12">
+        <div class="stats shadow bg-base-100">
+          <div class="stat">
+            <div class="stat-figure text-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-8 h-8 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+            </div>
+            <div class="stat-title">Total Likes</div>
+            <div class="stat-value text-primary">25.6K</div>
+            <div class="stat-desc">21% more than last month</div>
+          </div>
+          
+          <div class="stat">
+            <div class="stat-figure text-secondary">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-8 h-8 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+            </div>
+            <div class="stat-title">Page Views</div>
+            <div class="stat-value text-secondary">2.6M</div>
+            <div class="stat-desc">21% more than last month</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Menu Items -->
+  <div class="mb-12">
+    <h3 class="h3 mb-6">Menu Items</h3>
+    <div class="rack">
+      <div class="col-6">
+        <ul class="menu bg-base-100 w-64 p-2 rounded-box shadow">
+          <li>
+            <a class="active">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
+              Homepage
+            </a>
+          </li>
+          <li>
+            <a>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              Updates
+              <span class="badge">99+</span>
+            </a>
+          </li>
+          <li>
+            <a>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+              Reports
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== ORGANISMS - Complex UI Sections ==================== -->
+<section id="organisms" class="mb-24">
+  <div class="text-center mb-12">
+    <h2 class="h2 mb-4">Organisms</h2>
+    <p class="text-lg opacity-75">Complex UI sections - Navigation Systems, Data Tables, Forms, Chat & Timeline</p>
+  </div>
+
+  <!-- Navigation Systems -->
+  <div class="mb-12">
+    <h3 class="h3 mb-6">Navigation Systems</h3>
+    
+    <!-- Navbar -->
+    <div class="mb-8">
+      <h4 class="text-lg font-semibold mb-4">Navbar</h4>
+      <div class="navbar bg-base-100 shadow-lg rounded-lg">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <label tabindex="0" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+            </label>
+          </div>
+          <a class="btn btn-ghost normal-case text-xl">Brand</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Services</a></li>
+            <li><a>Contact</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <a class="btn btn-primary">Get Started</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Elements -->
+    <div class="rack mb-8">
+      <div class="col-4">
+        <h4 class="text-lg font-semibold mb-4">Breadcrumbs</h4>
+        <div class="text-sm breadcrumbs">
+          <ul>
+            <li><a>Home</a></li>
+            <li><a>Documents</a></li>
+            <li>Current Page</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-4">
+        <h4 class="text-lg font-semibold mb-4">Steps</h4>
+        <ul class="steps steps-horizontal">
+          <li class="step step-primary">Register</li>
+          <li class="step step-primary">Choose plan</li>
+          <li class="step">Purchase</li>
+          <li class="step">Receive</li>
+        </ul>
+      </div>
+      <div class="col-4">
+        <h4 class="text-lg font-semibold mb-4">Tabs</h4>
+        <div class="tabs tabs-boxed">
+          <a class="tab">Tab 1</a>
+          <a class="tab tab-active">Tab 2</a>
+          <a class="tab">Tab 3</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Data Tables -->
+  <div class="mb-12">
+    <h3 class="h3 mb-6">Data Tables</h3>
+    <div class="rack">
+      <div class="col-12">
+        <div class="overflow-x-auto">
+          <table class="table table-zebra">
+            <thead>
+              <tr>
+                <th>
+                  <label>
+                    <input type="checkbox" class="checkbox" />
+                  </label>
+                </th>
+                <th>Name</th>
+                <th>Job</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>
+                  <label>
+                    <input type="checkbox" class="checkbox" />
+                  </label>
+                </th>
+                <td>
+                  <div class="flex items-center space-x-3">
+                    <div class="avatar">
+                      <div class="mask mask-squircle w-12 h-12">
+                        <img src="https://daisyui.com/tailwind-css-component-profile-2@56w.png" alt="Avatar" />
+                      </div>
+                    </div>
+                    <div>
+                      <div class="font-bold">Hart Hagerty</div>
+                      <div class="text-sm opacity-50">United States</div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  Desktop Support Technician
+                  <br/>
+                  <span class="badge badge-ghost badge-sm">Full-time</span>
+                </td>
+                <td><span class="badge badge-success">Active</span></td>
+                <td>
+                  <button class="btn btn-ghost btn-xs">Edit</button>
+                  <button class="btn btn-ghost btn-xs">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Forms -->
+  <div class="mb-12">
+    <h3 class="h3 mb-6">Complete Forms</h3>
+    <div class="rack">
+      <div class="col-6">
+        <div class="card bg-base-100 shadow-lg">
+          <div class="card-body">
+            <h4 class="card-title">Contact Form</h4>
+            <form class="space-y-4">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Name</span>
+                </label>
+                <input type="text" placeholder="Your name" class="input input-bordered" />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Email</span>
+                </label>
+                <input type="email" placeholder="your@email.com" class="input input-bordered" />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Message</span>
+                </label>
+                <textarea class="textarea textarea-bordered" placeholder="Your message"></textarea>
+              </div>
+              <div class="form-control mt-6">
+                <button class="btn btn-primary">Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chat Interface -->
+  <div class="mb-12">
+    <h3 class="h3 mb-6">Chat Interface</h3>
+    <div class="rack">
+      <div class="col-8">
+        <div class="bg-base-100 shadow-lg rounded-lg p-4 h-64 overflow-y-auto">
+          <div class="chat chat-start">
+            <div class="chat-image avatar">
+              <div class="w-10 rounded-full">
+                <img alt="User avatar" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+              </div>
+            </div>
+            <div class="chat-header">
+              Alice
+              <time class="text-xs opacity-50">12:45</time>
+            </div>
+            <div class="chat-bubble">Hello! How are you today?</div>
+          </div>
+          <div class="chat chat-end">
+            <div class="chat-image avatar">
+              <div class="w-10 rounded-full">
+                <img alt="User avatar" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+              </div>
+            </div>
+            <div class="chat-header">
+              You
+              <time class="text-xs opacity-50">12:46</time>
+            </div>
+            <div class="chat-bubble chat-bubble-primary">I'm doing great! Thanks for asking.</div>
+          </div>
+        </div>
+        <div class="mt-4 flex gap-2">
+          <input type="text" placeholder="Type a message..." class="input input-bordered flex-1" />
+          <button class="btn btn-primary">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Timeline -->
+  <div class="mb-12">
+    <h3 class="h3 mb-6">Timeline</h3>
+    <div class="rack">
+      <div class="col-8">
+        <ul class="timeline timeline-snap-icon timeline-compact timeline-vertical">
+          <li>
+            <div class="timeline-middle">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-primary"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.236 4.53L8.93 10.7a.75.75 0 00-1.06 1.061l1.884 1.884a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+            </div>
+            <div class="timeline-start md:text-end mb-10">
+              <time class="font-mono italic text-sm">2024</time>
+              <div class="text-lg font-black">Project Started</div>
+              Initial planning and development phase began.
+            </div>
+            <hr class="bg-primary"/>
+          </li>
+          <li>
+            <hr class="bg-primary"/>
+            <div class="timeline-middle">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-secondary"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.236 4.53L8.93 10.7a.75.75 0 00-1.06 1.061l1.884 1.884a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+            </div>
+            <div class="timeline-end mb-10">
+              <time class="font-mono italic text-sm">2024</time>
+              <div class="text-lg font-black">Beta Release</div>
+              First beta version released to select users.
+            </div>
+            <hr class="bg-secondary"/>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== TEMPLATES - Layout Patterns ==================== -->
+<section id="templates" class="mb-24">
+  <div class="text-center mb-12">
+    <h2 class="h2 mb-4">Templates</h2>
+    <p class="text-lg opacity-75">Layout patterns - Hero Sections, Modals, Drawers, Mockups & Advanced Components</p>
+  </div>
+
+  <!-- Hero Sections -->
+  <div class="mb-12">
+    <h3 class="h3 mb-6">Hero Sections</h3>
+    <div class="rack">
+      <div class="col-12">
+        <div class="hero bg-base-200 rounded-lg">
+          <div class="hero-content text-center py-16">
+            <div class="max-w-md">
+              <h1 class="text-4xl font-bold">Welcome to DaisyUI</h1>
+              <p class="py-6">Beautiful and semantic component library for rapid UI development with Tailwind CSS.</p>
+              <button class="btn btn-primary mr-2">Get Started</button>
+              <button class="btn btn-outline">Learn More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Dialogs -->
+  <div class="mb-12">
+    <h3 class="h3 mb-6">Modal Dialogs</h3>
+    <div class="rack">
+      <div class="col-6">
+        <label for="demo-modal" class="btn btn-primary">Open Modal</label>
+        <input type="checkbox" id="demo-modal" class="modal-toggle" />
+        <div class="modal">
+          <div class="modal-box">
+            <h3 class="font-bold text-lg">Hello there!</h3>
+            <p class="py-4">This is a sample modal dialog showcasing the modal component functionality.</p>
+            <div class="modal-action">
+              <label for="demo-modal" class="btn">Close</label>
+              <label for="demo-modal" class="btn btn-primary">Confirm</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Drawer Layouts -->
+  <div class="mb-12">
+    <h3 class="h3 mb-6">Drawer Layout</h3>
+    <div class="rack">
+      <div class="col-12">
+        <div class="drawer h-64 bg-base-200 rounded-lg">
+          <input id="demo-drawer" type="checkbox" class="drawer-toggle" />
+          <div class="drawer-content flex flex-col items-center justify-center">
+            <label for="demo-drawer" class="btn btn-primary drawer-button">Open Drawer</label>
+          </div>
+          <div class="drawer-side">
+            <label for="demo-drawer" class="drawer-overlay"></label>
+            <ul class="menu p-4 w-80 h-full bg-base-100 text-base-content">
+              <li><a>Sidebar Item 1</a></li>
+              <li><a>Sidebar Item 2</a></li>
+              <li><a>Sidebar Item 3</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mockup Containers -->
+  <div class="mb-12">
+    <h3 class="h3 mb-6">Mockup Containers</h3>
+    
+    <!-- Browser & Window -->
+    <div class="rack mb-8">
+      <div class="col-6">
+        <h4 class="text-lg font-semibold mb-4">Browser Mockup</h4>
+        <div class="mockup-browser border bg-base-300">
+          <div class="mockup-browser-toolbar">
+            <div class="input">https://daisyui.com</div>
+          </div>
+          <div class="flex justify-center px-4 py-16 bg-base-200">
+            <div class="text-center">
+              <h4 class="text-xl font-bold">Website Content</h4>
+              <p>Your amazing website goes here!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <h4 class="text-lg font-semibold mb-4">Window Mockup</h4>
+        <div class="mockup-window border bg-base-300">
+          <div class="flex justify-center px-4 py-16 bg-base-200">
+            <div class="text-center">
+              <h4 class="text-xl font-bold">Application Window</h4>
+              <p>Desktop application interface</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phone & Code -->
+    <div class="rack">
+      <div class="col-6">
+        <h4 class="text-lg font-semibold mb-4">Phone Mockup</h4>
+        <div class="mockup-phone">
+          <div class="camera"></div>
+          <div class="display">
+            <div class="artboard artboard-demo phone-1">
+              <div class="text-center p-4">
+                <h4 class="font-bold">Mobile App</h4>
+                <p>Your mobile interface</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <h4 class="text-lg font-semibold mb-4">Code Mockup</h4>
+        <div class="mockup-code">
+          <pre data-prefix="$"><code>npm install daisyui</code></pre>
+          <pre data-prefix=">" class="text-warning"><code>installing...</code></pre>
+          <pre data-prefix=">" class="text-success"><code>Done!</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Advanced Components -->
+  <div class="mb-12">
+    <h3 class="h3 mb-6">Advanced Components</h3>
+    
+    <div class="rack mb-8">
+      <div class="col-4">
+        <h4 class="text-lg font-semibold mb-4">Accordion</h4>
+        <div class="space-y-2">
+          <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="accordion" checked="checked" />
+            <div class="collapse-title text-lg font-medium">
+              Section 1
+            </div>
+            <div class="collapse-content">
+              <p>Content for section 1 goes here.</p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="accordion" />
+            <div class="collapse-title text-lg font-medium">
+              Section 2
+            </div>
+            <div class="collapse-content">
+              <p>Content for section 2 goes here.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <h4 class="text-lg font-semibold mb-4">Carousel</h4>
+        <div class="carousel w-full max-w-md">
+          <div id="slide1" class="carousel-item relative w-full">
+            <img src="https://daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg" class="w-full" />
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a href="#slide2" class="btn btn-circle">&lt;</a>
+              <a href="#slide2" class="btn btn-circle">&gt;</a>
+            </div>
+          </div>
+          <div id="slide2" class="carousel-item relative w-full">
+            <img src="https://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg" class="w-full" />
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a href="#slide1" class="btn btn-circle">&lt;</a>
+              <a href="#slide1" class="btn btn-circle">&gt;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <h4 class="text-lg font-semibold mb-4">Feedback Components</h4>
+        <div class="space-y-3">
+          <div class="alert alert-success">
+            <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            <span>Success message!</span>
+          </div>
+          <div class="toast toast-top toast-end">
+            <div class="alert alert-info">
+              <span>New notification</span>
+            </div>
+          </div>
+          <div class="tooltip" data-tip="Helpful tooltip">
+            <button class="btn">Hover me</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Specialized Components -->
+    <div class="rack">
+      <div class="col-4">
+        <h4 class="text-lg font-semibold mb-4">Countdown</h4>
+        <span class="countdown font-mono text-4xl">
+          <span style="--value:15;"></span>:
+          <span style="--value:10;"></span>:
+          <span style="--value:24;"></span>
+        </span>
+      </div>
+      <div class="col-4">
+        <h4 class="text-lg font-semibold mb-4">Diff Viewer</h4>
+        <div class="diff aspect-[16/9] text-xs">
+          <div class="diff-item-1">
+            <div class="bg-primary text-primary-content text-2xl font-black grid place-content-center">BEFORE</div>
+          </div>
+          <div class="diff-item-2">
+            <div class="bg-base-200 text-2xl font-black grid place-content-center">AFTER</div>
+          </div>
+          <div class="diff-resizer"></div>
+        </div>
+      </div>
+      <div class="col-4">
+        <h4 class="text-lg font-semibold mb-4">Layout Utilities</h4>
+        <div class="space-y-3">
+          <div class="divider">OR</div>
+          <div class="indicator">
+            <span class="indicator-item badge badge-secondary">new</span>
+            <div class="grid w-32 h-20 bg-base-300 place-items-center">content</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>

@@ -1,14 +1,15 @@
 # Dependencies
 node_modules/
 
-# No project's content
-env/public/
-!env/public/css/app.css
-!env/public/css/colors.css
-!env/public/css/input.css
-!env/public/css/typography.css
-env/views/
-env/app.rb
+# Protect ONLY user-created project files from being overwritten
+# (Templates, demo/, and public/ should be updated with new environment)
+env/views/contact.erb
+env/views/footer.erb  
+env/views/head.erb
+env/views/index.erb
+env/views/layout.erb
+env/views/price.erb
+env/views/trial.erb
 
 # macOS
 .DS_Store

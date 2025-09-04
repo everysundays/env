@@ -1,0 +1,1529 @@
+<header class="hero bg-base-200">
+  <div class="hero-content text-center">
+    <div>
+      <h1 class="h1">DaisyUI Components</h1>
+      <p>Complete showcase of all DaisyUI components</p>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ==================== ORIGINAL COMPREHENSIVE COMPONENTS ==================== -->
+
+<!-- Typography -->
+<section>
+  <h2 class="h2">Typography</h2>
+
+  <!-- Custom CSS Headings -->
+  <div>
+    <h3 class="h3">Custom CSS Headings (input.css:56-61)</h3>
+    <div class="flex flex-col gap-2">
+      <h1>H1 - Custom CSS sizing <!-- Custom: font-size: calc(var(--body-size) * 2) --></h1>
+      <h2>H2 - Custom CSS sizing <!-- Custom: font-size: calc(var(--body-size) * 1.75) --></h2>
+      <h3>H3 - Custom CSS sizing <!-- Custom: font-size: calc(var(--body-size) * 1.5) --></h3>
+      <h4>H4 - Custom CSS sizing <!-- Custom: font-size: calc(var(--body-size) * 1.25) --></h4>
+      <h5>H5 - Custom CSS sizing <!-- Custom: font-size: calc(var(--body-size) * 1) --></h5>
+      <h6>H6 - Custom CSS sizing <!-- Custom: font-size: calc(var(--body-size) * 0.875) --></h6>
+    </div>
+  </div>
+
+
+</section>
+
+<!-- Actions -->
+<section>
+  <h2 class="h2">Actions</h2>
+
+  <!-- Button -->
+  <div>
+    <h3 class="h3">Button</h3>
+    <div class="flex flex-wrap gap-2">
+      <button class="btn">Default</button>
+      <button class="btn btn-neutral">Neutral</button>
+      <button class="btn btn-primary">Primary</button>
+      <button class="btn btn-secondary">Secondary</button>
+      <button class="btn btn-accent">Accent</button>
+      <button class="btn btn-info">Info</button>
+      <button class="btn btn-success">Success</button>
+      <button class="btn btn-warning">Warning</button>
+      <button class="btn btn-error">Error</button>
+    </div>
+    <div class="flex flex-wrap gap-2">
+      <button class="btn btn-ghost">Ghost</button>
+      <button class="btn btn-link">Link</button>
+      <button class="btn btn-outline">Outline</button>
+      <button class="btn btn-outline btn-primary">Outline Primary</button>
+      <button class="btn btn-outline btn-secondary">Outline Secondary</button>
+      <button class="btn btn-outline btn-accent">Outline Accent</button>
+    </div>
+    <div class="flex flex-wrap gap-2">
+      <button class="btn btn-xs">Tiny</button>
+      <button class="btn btn-sm">Small</button>
+      <button class="btn">Medium</button>
+      <button class="btn btn-lg">Large</button>
+      <button class="btn btn-wide">Wide</button>
+      <button class="btn btn-block">Block</button>
+    </div>
+    <div class="flex flex-wrap gap-2">
+      <button class="btn btn-square">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+      </button>
+      <button class="btn btn-circle">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+      </button>
+    </div>
+    <div class="flex flex-wrap gap-2">
+      <button class="btn" disabled>Disabled</button>
+      <button class="btn btn-loading">Loading</button>
+      <span class="loading loading-spinner loading-lg"></span>
+    </div>
+  </div>
+
+  <!-- Dropdown -->
+  <div>
+    <h3 class="h3">Dropdown</h3>
+    <div class="dropdown">
+      <label tabindex="0" class="btn m-1">Click</label>
+      <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+        <li><a>Item 1</a></li>
+        <li><a>Item 2</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div>
+    <h3 class="h3">Modal</h3>
+    <button class="btn" onclick="my_modal_1.showModal()">Open Modal</button>
+    <dialog id="my_modal_1" class="modal">
+      <div class="modal-box">
+        <h3 class="h3">Hello!</h3>
+        <p class="py-4">Press ESC key or click the button below to close</p>
+        <div class="modal-action">
+          <form method="dialog">
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+  </div>
+
+  <!-- Swap -->
+  <div>
+    <h3 class="h3">Swap</h3>
+    <label class="swap">
+      <input type="checkbox" />
+      <svg class="swap-on fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,7L5,7L5,5L19,5L19,7ZM19,19L5,19L5,17L19,17L19,19ZM5,13L19,13L19,11L5,11L5,13Z"/></svg>
+      <svg class="swap-off fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6,18L18,18L18,6L6,6L6,18Z"/></svg>
+    </label>
+    <label class="swap swap-rotate">
+      <input type="checkbox" />
+      <svg class="swap-off fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"/></svg>
+      <svg class="swap-on fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"/></svg>
+    </label>
+    <label class="swap swap-flip">
+      <input type="checkbox" />
+      <div class="swap-on">😈</div>
+      <div class="swap-off">😇</div>
+    </label>
+  </div>
+
+  <!-- Join -->
+  <div>
+    <h3 class="h3">Join</h3>
+    <div class="join">
+      <button class="btn join-item">Button</button>
+      <button class="btn join-item btn-active">Button</button>
+      <button class="btn join-item">Button</button>
+    </div>
+    <div class="join">
+      <input class="input input-bordered join-item" placeholder="Email"/>
+      <button class="btn join-item btn-neutral">Subscribe</button>
+    </div>
+  </div>
+</section>
+
+<!-- Data Display -->
+<section>
+  <h2 class="h2">Data Display</h2>
+
+  <!-- Accordion -->
+  <div>
+    <h3 class="h3">Accordion</h3>
+    <div class="join join-vertical w-full">
+      <div class="collapse collapse-arrow join-item border border-base-300">
+        <input type="radio" name="my-accordion-4" checked="checked" />
+        <div class="collapse-title">Click to open this one and close others</div>
+        <div class="collapse-content"><p>hello</p></div>
+      </div>
+      <div class="collapse collapse-arrow join-item border border-base-300">
+        <input type="radio" name="my-accordion-4" />
+        <div class="collapse-title">Click to open this one and close others</div>
+        <div class="collapse-content"><p>world</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Avatar -->
+  <div>
+    <h3 class="h3">Avatar</h3>
+    <div class="flex gap-4">
+      <div class="avatar">
+        <div class="w-24 rounded-full">
+          <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+        </div>
+      </div>
+      <div class="avatar">
+        <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+          <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+        </div>
+      </div>
+      <div class="avatar online">
+        <div class="w-24 rounded-full">
+          <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+        </div>
+      </div>
+      <div class="avatar placeholder">
+        <div class="bg-neutral text-neutral-content rounded-full w-24">
+          <span class="text-3xl">K</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Badge -->
+  <div>
+    <h3 class="h3">Badge</h3>
+    <div class="flex gap-2">
+      <div class="badge">default</div>
+      <div class="badge badge-neutral">neutral</div>
+      <div class="badge badge-primary">primary</div>
+      <div class="badge badge-secondary">secondary</div>
+      <div class="badge badge-accent">accent</div>
+      <div class="badge badge-ghost">ghost</div>
+      <div class="badge badge-info">info</div>
+      <div class="badge badge-success">success</div>
+      <div class="badge badge-warning">warning</div>
+      <div class="badge badge-error">error</div>
+    </div>
+    <div class="flex gap-2">
+      <div class="badge badge-outline">outline</div>
+      <div class="badge badge-primary badge-outline">primary</div>
+      <div class="badge badge-secondary badge-outline">secondary</div>
+      <div class="badge badge-accent badge-outline">accent</div>
+    </div>
+    <div class="flex gap-2">
+      <div class="badge badge-xs">xs</div>
+      <div class="badge badge-sm">sm</div>
+      <div class="badge badge-md">md</div>
+      <div class="badge badge-lg">lg</div>
+    </div>
+  </div>
+
+  <!-- Card -->
+  <div>
+    <h3 class="h3">Card</h3>
+    <div class="card bg-base-100 shadow-xl">
+      <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" /></figure>
+      <div class="card-body">
+        <h2 class="card-title">
+          Shoes!
+          <div class="badge badge-secondary">NEW</div>
+        </h2>
+        <p>If a dog chews shoes whose shoes does he choose?</p>
+        <div class="card-actions justify-end">
+          <div class="badge badge-outline">Fashion</div>
+          <div class="badge badge-outline">Products</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Carousel -->
+  <div>
+    <h3 class="h3">Carousel</h3>
+    <div class="carousel w-full">
+      <div id="slide1" class="carousel-item relative w-full">
+        <img src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp" class="w-full" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide4" class="btn btn-circle">❮</a>
+          <a href="#slide2" class="btn btn-circle">❯</a>
+        </div>
+      </div>
+      <div id="slide2" class="carousel-item relative w-full">
+        <img src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp" class="w-full" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide1" class="btn btn-circle">❮</a>
+          <a href="#slide3" class="btn btn-circle">❯</a>
+        </div>
+      </div>
+      <div id="slide3" class="carousel-item relative w-full">
+        <img src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp" class="w-full" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide2" class="btn btn-circle">❮</a>
+          <a href="#slide4" class="btn btn-circle">❯</a>
+        </div>
+      </div>
+      <div id="slide4" class="carousel-item relative w-full">
+        <img src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp" class="w-full" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide3" class="btn btn-circle">❮</a>
+          <a href="#slide1" class="btn btn-circle">❯</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chat -->
+  <div>
+    <h3 class="h3">Chat</h3>
+    <div class="chat chat-start">
+      <div class="chat-bubble">It's over Anakin, <br/>I have the high ground.</div>
+    </div>
+    <div class="chat chat-end">
+      <div class="chat-bubble">You underestimate my power!</div>
+    </div>
+    <div class="chat chat-start">
+      <div class="chat-bubble chat-bubble-primary">What time is it?</div>
+    </div>
+    <div class="chat chat-end">
+      <div class="chat-bubble chat-bubble-secondary">It's 12:45</div>
+    </div>
+    <div class="chat chat-start">
+      <div class="chat-bubble chat-bubble-accent">Check out this image!</div>
+    </div>
+    <div class="chat chat-end">
+      <div class="chat-bubble chat-bubble-info">Wow, that's cool!</div>
+    </div>
+  </div>
+
+  <!-- Collapse -->
+  <div>
+    <h3 class="h3">Collapse</h3>
+    <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-200">
+      <div class="collapse-title">Focus me to see content</div>
+      <div class="collapse-content">
+        <p>tabindex="0" attribute is necessary to make the div focusable</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Countdown -->
+  <div>
+    <h3 class="h3">Countdown</h3>
+    <span class="countdown font-mono">
+      <span style="--value:10;"></span>h
+      <span style="--value:24;"></span>m
+      <span style="--value:43;"></span>s
+    </span>
+  </div>
+
+  <!-- Diff -->
+  <div>
+    <h3 class="h3">Diff</h3>
+    <div class="diff aspect-[16/9]">
+      <div class="diff-item-1">
+        <img alt="daisy" src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a.webp" />
+      </div>
+      <div class="diff-item-2">
+        <img alt="daisy" src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a-bw.webp" />
+      </div>
+      <div class="diff-resizer"></div>
+    </div>
+  </div>
+
+  <!-- Keyboard -->
+  <div>
+    <h3 class="h3">Keyboard</h3>
+    <kbd class="kbd">A</kbd> <kbd class="kbd">W</kbd> <kbd class="kbd">S</kbd> <kbd class="kbd">D</kbd>
+    <br/>
+    <kbd class="kbd">ctrl</kbd>+<kbd class="kbd">shift</kbd>+<kbd class="kbd">del</kbd>
+  </div>
+
+  <!-- Stat -->
+  <div>
+    <h3 class="h3">Stat</h3>
+    <div class="stats shadow">
+      <div class="stat">
+        <div class="stat-figure text-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-8 h-8 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+        </div>
+        <div class="stat-title">Total Likes</div>
+        <div class="stat-value text-primary">25.6K</div>
+        <div class="stat-desc">21% more than last month</div>
+      </div>
+      <div class="stat">
+        <div class="stat-figure text-secondary">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-8 h-8 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        </div>
+        <div class="stat-title">Page Views</div>
+        <div class="stat-value text-secondary">2.6M</div>
+        <div class="stat-desc">21% more than last month</div>
+      </div>
+      <div class="stat">
+        <div class="stat-figure text-secondary">
+          <div class="avatar online">
+            <div class="w-16 rounded-full">
+              <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+            </div>
+          </div>
+        </div>
+        <div class="stat-value">86%</div>
+        <div class="stat-title">Tasks done</div>
+        <div class="stat-desc text-secondary">31 tasks remaining</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Table -->
+  <div>
+    <h3 class="h3">Table</h3>
+    <div class="overflow-x-auto">
+      <table class="table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Job</th>
+            <th>Favorite Color</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>1</th>
+            <td>Cy Ganderton</td>
+            <td>Quality Control Specialist</td>
+            <td>Blue</td>
+          </tr>
+          <tr class="hover">
+            <th>2</th>
+            <td>Hart Hagerty</td>
+            <td>Desktop Support Technician</td>
+            <td>Purple</td>
+          </tr>
+          <tr>
+            <th>3</th>
+            <td>Brice Swyre</td>
+            <td>Tax Accountant</td>
+            <td>Red</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Timeline -->
+  <div>
+    <h3 class="h3">Timeline</h3>
+    <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+      <li>
+        <div class="timeline-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+        </div>
+        <div class="timeline-start md:text-end mb-10">
+          <time class="font-mono italic">1984</time>
+          <div>First Macintosh computer</div>
+        </div>
+        <hr/>
+      </li>
+      <li>
+        <hr />
+        <div class="timeline-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+        </div>
+        <div class="timeline-end mb-10">
+          <time class="font-mono italic">1998</time>
+          <div>iMac</div>
+        </div>
+        <hr />
+      </li>
+      <li>
+        <hr />
+        <div class="timeline-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+        </div>
+        <div class="timeline-start md:text-end mb-10">
+          <time class="font-mono italic">2001</time>
+          <div>iPod</div>
+        </div>
+        <hr />
+      </li>
+      <li>
+        <hr />
+        <div class="timeline-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+        </div>
+        <div class="timeline-end mb-10">
+          <time class="font-mono italic">2007</time>
+          <div>iPhone</div>
+        </div>
+        <hr />
+      </li>
+      <li>
+        <hr />
+        <div class="timeline-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+        </div>
+        <div class="timeline-start md:text-end mb-10">
+          <time class="font-mono italic">2015</time>
+          <div>Apple Watch</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- Navigation -->
+<section>
+  <h2 class="h2">Navigation</h2>
+
+  <!-- Breadcrumbs -->
+  <div>
+    <h3 class="h3">Breadcrumbs</h3>
+    <div class="breadcrumbs">
+      <ul>
+        <li>Home</li>
+        <li>Documents</li>
+        <li>Add Document</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Bottom Navigation -->
+  <div>
+    <h3 class="h3">Bottom Navigation</h3>
+    <div class="btm-nav">
+      <button>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
+      </button>
+      <button class="active">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+      </button>
+      <button>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Link -->
+  <div>
+    <h3 class="h3">Link</h3>
+    <a class="link">I'm a simple link</a>
+    <a class="link link-hover">I'm a link with hover style</a>
+    <a class="link link-primary">I'm a primary color link</a>
+    <a class="link link-secondary">I'm a secondary color link</a>
+    <a class="link link-accent">I'm a accent color link</a>
+    <a class="link link-success">I'm a success color link</a>
+    <a class="link link-info">I'm a info color link</a>
+    <a class="link link-warning">I'm a warning color link</a>
+    <a class="link link-error">I'm a error color link</a>
+  </div>
+
+  <!-- Menu -->
+  <div>
+    <h3 class="h3">Menu</h3>
+    <ul class="menu bg-base-200 w-56 rounded-box">
+      <li><a>Item 1</a></li>
+      <li>
+        <details open>
+          <summary>Parent</summary>
+          <ul>
+            <li><a>Submenu 1</a></li>
+            <li><a>Submenu 2</a></li>
+          </ul>
+        </details>
+      </li>
+      <li><a>Item 3</a></li>
+    </ul>
+  </div>
+
+  <!-- Navbar -->
+  <div>
+    <h3 class="h3">Navbar</h3>
+    <div class="navbar bg-base-100">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            <li><a>Homepage</a></li>
+            <li><a>Portfolio</a></li>
+            <li><a>About</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="navbar-center">
+        <a class="btn btn-ghost text-xl">daisyUI</a>
+      </div>
+      <div class="navbar-end">
+        <button class="btn btn-ghost btn-circle">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+        </button>
+        <button class="btn btn-ghost btn-circle">
+          <div class="indicator">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg>
+            <span class="badge badge-xs badge-primary indicator-item"></span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div>
+    <h3 class="h3">Pagination</h3>
+    <div class="join">
+      <button class="join-item btn">«</button>
+      <button class="join-item btn">Page 1</button>
+      <button class="join-item btn btn-active">Page 2</button>
+      <button class="join-item btn">...</button>
+      <button class="join-item btn">Page 99</button>
+      <button class="join-item btn">Page 100</button>
+      <button class="join-item btn">»</button>
+    </div>
+  </div>
+
+  <!-- Steps -->
+  <div>
+    <h3 class="h3">Steps</h3>
+    <ul class="steps">
+      <li class="step step-primary">Register</li>
+      <li class="step step-primary">Choose plan</li>
+      <li class="step">Purchase</li>
+      <li class="step">Receive Product</li>
+    </ul>
+  </div>
+
+  <!-- Tab -->
+  <div>
+    <h3 class="h3">Tab</h3>
+    <div role="tablist" class="tabs tabs-boxed">
+      <a role="tab" class="tab">Tab 1</a>
+      <a role="tab" class="tab tab-active">Tab 2</a>
+      <a role="tab" class="tab">Tab 3</a>
+    </div>
+  </div>
+</section>
+
+<!-- Feedback -->
+<section>
+  <h2 class="h2">Feedback</h2>
+
+  <!-- Alert -->
+  <div>
+    <h3 class="h3">Alert</h3>
+    <div class="alert">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+      <span>New software update available.</span>
+    </div>
+    <div class="alert alert-info">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+      <span>New software update available.</span>
+    </div>
+    <div class="alert alert-success">
+      <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+      <span>Your purchase has been confirmed!</span>
+    </div>
+    <div class="alert alert-warning">
+      <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+      <span>Warning: Invalid email address!</span>
+    </div>
+    <div class="alert alert-error">
+      <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+      <span>Error! Task failed successfully.</span>
+    </div>
+  </div>
+
+  <!-- Loading -->
+  <div>
+    <h3 class="h3">Loading</h3>
+    <span class="loading loading-spinner loading-xs"></span>
+    <span class="loading loading-spinner loading-sm"></span>
+    <span class="loading loading-spinner loading-md"></span>
+    <span class="loading loading-spinner loading-lg"></span>
+  </div>
+
+  <!-- Progress -->
+  <div>
+    <h3 class="h3">Progress</h3>
+    <progress class="progress w-56"></progress>
+    <progress class="progress progress-primary w-56" value="0" max="100"></progress>
+    <progress class="progress progress-secondary w-56" value="10" max="100"></progress>
+    <progress class="progress progress-accent w-56" value="40" max="100"></progress>
+    <progress class="progress progress-success w-56" value="70" max="100"></progress>
+    <progress class="progress progress-warning w-56" value="90" max="100"></progress>
+    <progress class="progress progress-error w-56" value="100" max="100"></progress>
+    <progress class="progress progress-info w-56" value="50" max="100"></progress>
+  </div>
+
+  <!-- Radial Progress -->
+  <div>
+    <h3 class="h3">Radial Progress</h3>
+    <div class="flex gap-4">
+      <div class="radial-progress" style="--value:0;" role="progressbar">0%</div>
+      <div class="radial-progress" style="--value:20;" role="progressbar">20%</div>
+      <div class="radial-progress" style="--value:60;" role="progressbar">60%</div>
+      <div class="radial-progress" style="--value:80;" role="progressbar">80%</div>
+      <div class="radial-progress" style="--value:100;" role="progressbar">100%</div>
+    </div>
+    <div class="flex gap-4">
+      <div class="radial-progress text-primary" style="--value:70;" role="progressbar">70%</div>
+      <div class="radial-progress text-secondary" style="--value:70;" role="progressbar">70%</div>
+    </div>
+  </div>
+
+  <!-- Skeleton -->
+  <div>
+    <h3 class="h3">Skeleton</h3>
+    <div class="skeleton h-32 w-32"></div>
+    <div class="skeleton h-4 w-28"></div>
+    <div class="skeleton h-4 w-full"></div>
+    <div class="skeleton h-4 w-full"></div>
+  </div>
+
+  <!-- Toast -->
+  <div>
+    <h3 class="h3">Toast</h3>
+    <div class="toast toast-top toast-end">
+      <div class="alert alert-info">
+        <span>New mail arrived.</span>
+      </div>
+      <div class="alert alert-success">
+        <span>Message sent successfully.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tooltip -->
+  <div>
+    <h3 class="h3">Tooltip</h3>
+    <div class="flex gap-4">
+      <div class="tooltip" data-tip="hello">
+        <button class="btn">Hover me</button>
+      </div>
+      <div class="tooltip tooltip-open" data-tip="hello">
+        <button class="btn">Force open</button>
+      </div>
+      <div class="tooltip tooltip-top" data-tip="hello">
+        <button class="btn">Top</button>
+      </div>
+      <div class="tooltip tooltip-bottom" data-tip="hello">
+        <button class="btn">Bottom</button>
+      </div>
+      <div class="tooltip tooltip-left" data-tip="hello">
+        <button class="btn">Left</button>
+      </div>
+      <div class="tooltip tooltip-right" data-tip="hello">
+        <button class="btn">Right</button>
+      </div>
+    </div>
+    <div class="flex gap-4">
+      <div class="tooltip tooltip-primary" data-tip="primary">
+        <button class="btn btn-primary">primary</button>
+      </div>
+      <div class="tooltip tooltip-secondary" data-tip="secondary">
+        <button class="btn btn-secondary">secondary</button>
+      </div>
+      <div class="tooltip tooltip-accent" data-tip="accent">
+        <button class="btn btn-accent">accent</button>
+      </div>
+      <div class="tooltip tooltip-info" data-tip="info">
+        <button class="btn btn-info">info</button>
+      </div>
+      <div class="tooltip tooltip-success" data-tip="success">
+        <button class="btn btn-success">success</button>
+      </div>
+      <div class="tooltip tooltip-warning" data-tip="warning">
+        <button class="btn btn-warning">warning</button>
+      </div>
+      <div class="tooltip tooltip-error" data-tip="error">
+        <button class="btn btn-error">error</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Data Input -->
+<section>
+  <h2 class="h2">Data Input</h2>
+
+  <!-- Checkbox -->
+  <div>
+    <h3 class="h3">Checkbox</h3>
+    <div class="form-control">
+      <label class="label cursor-pointer">
+        <span class="label-text">Remember me</span>
+        <input type="checkbox" checked class="checkbox" />
+      </label>
+    </div>
+    <div class="flex gap-2">
+      <input type="checkbox" checked class="checkbox" />
+      <input type="checkbox" checked class="checkbox checkbox-primary" />
+      <input type="checkbox" checked class="checkbox checkbox-secondary" />
+      <input type="checkbox" checked class="checkbox checkbox-accent" />
+      <input type="checkbox" checked class="checkbox checkbox-success" />
+      <input type="checkbox" checked class="checkbox checkbox-warning" />
+      <input type="checkbox" checked class="checkbox checkbox-info" />
+      <input type="checkbox" checked class="checkbox checkbox-error" />
+    </div>
+    <div class="flex gap-2">
+      <input type="checkbox" checked class="checkbox checkbox-xs" />
+      <input type="checkbox" checked class="checkbox checkbox-sm" />
+      <input type="checkbox" checked class="checkbox checkbox-md" />
+      <input type="checkbox" checked class="checkbox checkbox-lg" />
+    </div>
+  </div>
+
+  <!-- File Input -->
+  <div>
+    <h3 class="h3">File Input</h3>
+    <input type="file" class="file-input w-full max-w-xs" />
+    <input type="file" class="file-input file-input-bordered w-full max-w-xs" />
+    <input type="file" class="file-input file-input-bordered file-input-primary w-full max-w-xs" />
+    <input type="file" class="file-input file-input-bordered file-input-secondary w-full max-w-xs" />
+    <input type="file" class="file-input file-input-bordered file-input-accent w-full max-w-xs" />
+    <input type="file" class="file-input file-input-bordered file-input-info w-full max-w-xs" />
+    <input type="file" class="file-input file-input-bordered file-input-success w-full max-w-xs" />
+    <input type="file" class="file-input file-input-bordered file-input-warning w-full max-w-xs" />
+    <input type="file" class="file-input file-input-bordered file-input-error w-full max-w-xs" />
+  </div>
+
+  <!-- Text Input -->
+  <div>
+    <h3 class="h3">Text Input</h3>
+    <input type="text" placeholder="Type here" class="input w-full max-w-xs" />
+    <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+    <input type="text" placeholder="Type here" class="input input-bordered input-primary w-full max-w-xs" />
+    <input type="text" placeholder="Type here" class="input input-bordered input-secondary w-full max-w-xs" />
+    <input type="text" placeholder="Type here" class="input input-bordered input-accent w-full max-w-xs" />
+    <input type="text" placeholder="Type here" class="input input-bordered input-info w-full max-w-xs" />
+    <input type="text" placeholder="Type here" class="input input-bordered input-success w-full max-w-xs" />
+    <input type="text" placeholder="Type here" class="input input-bordered input-warning w-full max-w-xs" />
+    <input type="text" placeholder="Type here" class="input input-bordered input-error w-full max-w-xs" />
+    <input type="text" placeholder="Type here" class="input input-ghost w-full max-w-xs" />
+    <input type="text" placeholder="Type here" class="input input-bordered input-xs w-full max-w-xs" />
+    <input type="text" placeholder="Type here" class="input input-bordered input-sm w-full max-w-xs" />
+    <input type="text" placeholder="Type here" class="input input-bordered input-md w-full max-w-xs" />
+    <input type="text" placeholder="Type here" class="input input-bordered input-lg w-full max-w-xs" />
+  </div>
+
+  <!-- Radio -->
+  <div>
+    <h3 class="h3">Radio</h3>
+    <div class="form-control">
+      <label class="label cursor-pointer">
+        <span class="label-text">Red pill</span>
+        <input type="radio" name="radio-10" class="radio" />
+      </label>
+    </div>
+    <div class="form-control">
+      <label class="label cursor-pointer">
+        <span class="label-text">Blue pill</span>
+        <input type="radio" name="radio-10" class="radio" checked />
+      </label>
+    </div>
+    <div class="flex gap-2">
+      <input type="radio" name="radio-2" class="radio" checked />
+      <input type="radio" name="radio-2" class="radio radio-primary" />
+      <input type="radio" name="radio-2" class="radio radio-secondary" />
+      <input type="radio" name="radio-2" class="radio radio-accent" />
+      <input type="radio" name="radio-2" class="radio radio-success" />
+      <input type="radio" name="radio-2" class="radio radio-warning" />
+      <input type="radio" name="radio-2" class="radio radio-info" />
+      <input type="radio" name="radio-2" class="radio radio-error" />
+    </div>
+    <div class="flex gap-2">
+      <input type="radio" name="radio-size" class="radio radio-xs" checked />
+      <input type="radio" name="radio-size" class="radio radio-sm" />
+      <input type="radio" name="radio-size" class="radio radio-md" />
+      <input type="radio" name="radio-size" class="radio radio-lg" />
+    </div>
+  </div>
+
+  <!-- Range -->
+  <div>
+    <h3 class="h3">Range</h3>
+    <input type="range" min="0" max="100" value="40" class="range" />
+    <input type="range" min="0" max="100" value="25" class="range range-primary" />
+    <input type="range" min="0" max="100" value="50" class="range range-secondary" />
+    <input type="range" min="0" max="100" value="75" class="range range-accent" />
+    <input type="range" min="0" max="100" value="33" class="range range-success" />
+    <input type="range" min="0" max="100" value="66" class="range range-warning" />
+    <input type="range" min="0" max="100" value="45" class="range range-info" />
+    <input type="range" min="0" max="100" value="80" class="range range-error" />
+    <input type="range" min="0" max="100" value="40" class="range range-xs" />
+    <input type="range" min="0" max="100" value="50" class="range range-sm" />
+    <input type="range" min="0" max="100" value="60" class="range range-md" />
+    <input type="range" min="0" max="100" value="70" class="range range-lg" />
+    <div>
+      <input type="range" min="0" max="100" value="25" class="range" step="25" />
+      <div class="w-full flex justify-between px-2">
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+        <span>|</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rating -->
+  <div>
+    <h3 class="h3">Rating</h3>
+    <div class="rating">
+      <input type="radio" name="rating-1" class="mask mask-star" />
+      <input type="radio" name="rating-1" class="mask mask-star" checked />
+      <input type="radio" name="rating-1" class="mask mask-star" />
+      <input type="radio" name="rating-1" class="mask mask-star" />
+      <input type="radio" name="rating-1" class="mask mask-star" />
+    </div>
+    <div class="rating">
+      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+    </div>
+    <div class="rating">
+      <input type="radio" name="rating-3" class="mask mask-heart bg-red-400" />
+      <input type="radio" name="rating-3" class="mask mask-heart bg-orange-400" checked />
+      <input type="radio" name="rating-3" class="mask mask-heart bg-yellow-400" />
+      <input type="radio" name="rating-3" class="mask mask-heart bg-lime-400" />
+      <input type="radio" name="rating-3" class="mask mask-heart bg-green-400" />
+    </div>
+    <div class="rating rating-lg">
+      <input type="radio" name="rating-8" class="mask mask-star-2" />
+      <input type="radio" name="rating-8" class="mask mask-star-2" checked />
+      <input type="radio" name="rating-8" class="mask mask-star-2" />
+      <input type="radio" name="rating-8" class="mask mask-star-2" />
+      <input type="radio" name="rating-8" class="mask mask-star-2" />
+    </div>
+    <div class="rating rating-md">
+      <input type="radio" name="rating-7" class="mask mask-star-2" />
+      <input type="radio" name="rating-7" class="mask mask-star-2" checked />
+      <input type="radio" name="rating-7" class="mask mask-star-2" />
+      <input type="radio" name="rating-7" class="mask mask-star-2" />
+      <input type="radio" name="rating-7" class="mask mask-star-2" />
+    </div>
+    <div class="rating rating-sm">
+      <input type="radio" name="rating-6" class="mask mask-star-2" />
+      <input type="radio" name="rating-6" class="mask mask-star-2" checked />
+      <input type="radio" name="rating-6" class="mask mask-star-2" />
+      <input type="radio" name="rating-6" class="mask mask-star-2" />
+      <input type="radio" name="rating-6" class="mask mask-star-2" />
+    </div>
+    <div class="rating rating-xs">
+      <input type="radio" name="rating-5" class="mask mask-star-2" />
+      <input type="radio" name="rating-5" class="mask mask-star-2" checked />
+      <input type="radio" name="rating-5" class="mask mask-star-2" />
+      <input type="radio" name="rating-5" class="mask mask-star-2" />
+      <input type="radio" name="rating-5" class="mask mask-star-2" />
+    </div>
+    <div class="rating rating-half">
+      <input type="radio" name="rating-10" class="rating-hidden" />
+      <input type="radio" name="rating-10" class="mask mask-star-2 bg-green-500 mask-half-1" />
+      <input type="radio" name="rating-10" class="mask mask-star-2 bg-green-500 mask-half-2" />
+      <input type="radio" name="rating-10" class="mask mask-star-2 bg-green-500 mask-half-1" checked />
+      <input type="radio" name="rating-10" class="mask mask-star-2 bg-green-500 mask-half-2" />
+      <input type="radio" name="rating-10" class="mask mask-star-2 bg-green-500 mask-half-1" />
+      <input type="radio" name="rating-10" class="mask mask-star-2 bg-green-500 mask-half-2" />
+      <input type="radio" name="rating-10" class="mask mask-star-2 bg-green-500 mask-half-1" />
+      <input type="radio" name="rating-10" class="mask mask-star-2 bg-green-500 mask-half-2" />
+      <input type="radio" name="rating-10" class="mask mask-star-2 bg-green-500 mask-half-1" />
+      <input type="radio" name="rating-10" class="mask mask-star-2 bg-green-500 mask-half-2" />
+    </div>
+  </div>
+
+  <!-- Select -->
+  <div>
+    <h3 class="h3">Select</h3>
+    <select class="select w-full max-w-xs">
+      <option disabled selected>Pick your favorite Simpson</option>
+      <option>Homer</option>
+      <option>Marge</option>
+      <option>Bart</option>
+      <option>Lisa</option>
+      <option>Maggie</option>
+    </select>
+    <select class="select select-bordered w-full max-w-xs">
+      <option disabled selected>What is the best TV show?</option>
+      <option>Game of Thrones</option>
+      <option>Lost</option>
+      <option>Breaking Bad</option>
+      <option>Walking Dead</option>
+    </select>
+    <select class="select select-bordered select-primary w-full max-w-xs">
+      <option disabled selected>Pick your favorite language</option>
+      <option>Java</option>
+      <option>Go</option>
+      <option>C</option>
+      <option>C#</option>
+      <option>C++</option>
+      <option>Rust</option>
+      <option>JavaScript</option>
+      <option>Python</option>
+    </select>
+    <select class="select select-bordered select-secondary w-full max-w-xs">
+      <option disabled selected>Dark mode or light mode?</option>
+      <option>Dark mode</option>
+      <option>Light mode</option>
+    </select>
+    <select class="select select-bordered select-accent w-full max-w-xs">
+      <option disabled selected>Pick the best JS framework</option>
+      <option>Svelte</option>
+      <option>Vue</option>
+      <option>React</option>
+    </select>
+    <select class="select select-bordered select-xs w-full max-w-xs">
+      <option disabled selected>Tiny</option>
+      <option>Tiny Apple</option>
+      <option>Tiny Orange</option>
+      <option>Tiny Tomato</option>
+    </select>
+    <select class="select select-bordered select-sm w-full max-w-xs">
+      <option disabled selected>Small</option>
+      <option>Small Apple</option>
+      <option>Small Orange</option>
+      <option>Small Tomato</option>
+    </select>
+    <select class="select select-bordered select-md w-full max-w-xs">
+      <option disabled selected>Normal</option>
+      <option>Normal Apple</option>
+      <option>Normal Orange</option>
+      <option>Normal Tomato</option>
+    </select>
+    <select class="select select-bordered select-lg w-full max-w-xs">
+      <option disabled selected>Large</option>
+      <option>Large Apple</option>
+      <option>Large Orange</option>
+      <option>Large Tomato</option>
+    </select>
+    <select class="select select-info w-full max-w-xs">
+      <option disabled selected>Select your favorite anime</option>
+      <option>One Piece</option>
+      <option>Naruto</option>
+      <option>Death Note</option>
+      <option>Attack on Titan</option>
+      <option>Bleach</option>
+      <option>Fullmetal Alchemist</option>
+      <option>Jojo's Bizarre Adventure</option>
+    </select>
+    <select class="select select-success w-full max-w-xs">
+      <option disabled selected>Select your favorite anime</option>
+      <option>One Piece</option>
+      <option>Naruto</option>
+      <option>Death Note</option>
+      <option>Attack on Titan</option>
+      <option>Bleach</option>
+      <option>Fullmetal Alchemist</option>
+      <option>Jojo's Bizarre Adventure</option>
+    </select>
+    <select class="select select-warning w-full max-w-xs">
+      <option disabled selected>Select your favorite anime</option>
+      <option>One Piece</option>
+      <option>Naruto</option>
+      <option>Death Note</option>
+      <option>Attack on Titan</option>
+      <option>Bleach</option>
+      <option>Fullmetal Alchemist</option>
+      <option>Jojo's Bizarre Adventure</option>
+    </select>
+    <select class="select select-error w-full max-w-xs">
+      <option disabled selected>What is the best headless CMS</option>
+      <option>Strapi</option>
+      <option>Ghost</option>
+      <option>Netlify CMS</option>
+      <option>Sanity</option>
+    </select>
+  </div>
+
+  <!-- Textarea -->
+  <div>
+    <h3 class="h3">Textarea</h3>
+    <textarea class="textarea" placeholder="Bio"></textarea>
+    <textarea class="textarea textarea-bordered" placeholder="Bio"></textarea>
+    <textarea class="textarea textarea-bordered textarea-primary" placeholder="Primary"></textarea>
+    <textarea class="textarea textarea-bordered textarea-secondary" placeholder="Secondary"></textarea>
+    <textarea class="textarea textarea-bordered textarea-accent" placeholder="Accent"></textarea>
+    <textarea class="textarea textarea-bordered textarea-info" placeholder="Info"></textarea>
+    <textarea class="textarea textarea-bordered textarea-success" placeholder="Success"></textarea>
+    <textarea class="textarea textarea-bordered textarea-warning" placeholder="Warning"></textarea>
+    <textarea class="textarea textarea-bordered textarea-error" placeholder="Error"></textarea>
+    <textarea class="textarea textarea-ghost" placeholder="Ghost"></textarea>
+    <textarea class="textarea textarea-bordered textarea-xs" placeholder="Tiny"></textarea>
+    <textarea class="textarea textarea-bordered textarea-sm" placeholder="Small"></textarea>
+    <textarea class="textarea textarea-bordered textarea-md" placeholder="Normal"></textarea>
+    <textarea class="textarea textarea-bordered textarea-lg" placeholder="Large"></textarea>
+  </div>
+
+  <!-- Toggle -->
+  <div>
+    <h3 class="h3">Toggle</h3>
+    <input type="checkbox" class="toggle" checked />
+    <input type="checkbox" class="toggle toggle-primary" checked />
+    <input type="checkbox" class="toggle toggle-secondary" checked />
+    <input type="checkbox" class="toggle toggle-accent" checked />
+    <input type="checkbox" class="toggle toggle-success" checked />
+    <input type="checkbox" class="toggle toggle-warning" checked />
+    <input type="checkbox" class="toggle toggle-info" checked />
+    <input type="checkbox" class="toggle toggle-error" checked />
+    <input type="checkbox" class="toggle toggle-xs" checked />
+    <input type="checkbox" class="toggle toggle-sm" checked />
+    <input type="checkbox" class="toggle toggle-md" checked />
+    <input type="checkbox" class="toggle toggle-lg" checked />
+  </div>
+</section>
+
+<!-- Layout -->
+<section>
+  <h2 class="h2">Layout</h2>
+
+  <!-- Artboard -->
+  <div>
+    <h3 class="h3">Artboard</h3>
+    <div class="artboard phone-1">320×568</div>
+  </div>
+
+  <!-- Divider -->
+  <div>
+    <h3 class="h3">Divider</h3>
+    <div class="divider">OR</div>
+    <div class="flex flex-col w-full lg:flex-row">
+      <div class="grid flex-grow h-32 card bg-base-300 rounded-box place-items-center">content</div>
+      <div class="divider lg:divider-horizontal">OR</div>
+      <div class="grid flex-grow h-32 card bg-base-300 rounded-box place-items-center">content</div>
+    </div>
+    <div class="flex w-full flex-col">
+      <div class="grid h-20 card bg-base-300 rounded-box place-items-center">content</div>
+      <div class="divider">OR</div>
+      <div class="grid h-20 card bg-base-300 rounded-box place-items-center">content</div>
+    </div>
+  </div>
+
+  <!-- Drawer -->
+  <div>
+    <h3 class="h3">Drawer</h3>
+    <div class="drawer">
+      <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+      <div class="drawer-content">
+        <label for="my-drawer" class="btn btn-primary drawer-button">Open drawer</label>
+      </div>
+      <div class="drawer-side">
+        <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+        <ul class="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
+          <li><a>Sidebar Item 1</a></li>
+          <li><a>Sidebar Item 2</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div>
+    <h3 class="h3">Footer</h3>
+    <footer class="footer p-10 bg-base-200 text-base-content">
+      <nav>
+        <h6 class="footer-title">Services</h6>
+        <a class="link link-hover">Branding</a>
+        <a class="link link-hover">Design</a>
+        <a class="link link-hover">Marketing</a>
+        <a class="link link-hover">Advertisement</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title">Company</h6>
+        <a class="link link-hover">About us</a>
+        <a class="link link-hover">Contact</a>
+        <a class="link link-hover">Jobs</a>
+        <a class="link link-hover">Press kit</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title">Legal</h6>
+        <a class="link link-hover">Terms of use</a>
+        <a class="link link-hover">Privacy policy</a>
+        <a class="link link-hover">Cookie policy</a>
+      </nav>
+    </footer>
+  </div>
+
+  <!-- Hero -->
+  <div>
+    <h3 class="h3">Hero</h3>
+    <div class="hero min-h-screen bg-base-200">
+      <div class="hero-content text-center">
+        <div class="max-w-md">
+          <h1 class="h1">Hello there</h1>
+          <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+          <button class="btn btn-primary">Get Started</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Indicator -->
+  <div>
+    <h3 class="h3">Indicator</h3>
+    <div class="indicator">
+      <span class="indicator-item badge badge-secondary">99+</span>
+      <button class="btn">inbox</button>
+    </div>
+    <div class="indicator">
+      <span class="indicator-item badge badge-primary">new</span>
+      <button class="btn">inbox</button>
+    </div>
+    <div class="indicator">
+      <span class="indicator-item indicator-start badge badge-secondary">99+</span>
+      <button class="btn">inbox</button>
+    </div>
+    <div class="indicator">
+      <span class="indicator-item indicator-center badge badge-secondary">99+</span>
+      <button class="btn">inbox</button>
+    </div>
+    <div class="indicator">
+      <span class="indicator-item indicator-end badge badge-secondary">99+</span>
+      <button class="btn">inbox</button>
+    </div>
+    <div class="indicator">
+      <span class="indicator-item indicator-bottom badge badge-secondary">99+</span>
+      <button class="btn">inbox</button>
+    </div>
+    <div class="indicator">
+      <span class="indicator-item indicator-middle badge badge-secondary">99+</span>
+      <button class="btn">inbox</button>
+    </div>
+    <div class="indicator">
+      <span class="indicator-item indicator-top badge badge-secondary">99+</span>
+      <button class="btn">inbox</button>
+    </div>
+    <div class="indicator">
+      <span class="indicator-item indicator-start indicator-top badge badge-secondary">99+</span>
+      <button class="btn">inbox</button>
+    </div>
+    <div class="indicator">
+      <span class="indicator-item indicator-center indicator-top badge badge-secondary">99+</span>
+      <button class="btn">inbox</button>
+    </div>
+    <div class="indicator">
+      <span class="indicator-item indicator-end indicator-top badge badge-secondary">99+</span>
+      <button class="btn">inbox</button>
+    </div>
+    <div class="indicator">
+      <span class="indicator-item indicator-start indicator-middle badge badge-secondary">99+</span>
+      <button class="btn">inbox</button>
+    </div>
+    <div class="indicator">
+      <span class="indicator-item indicator-center indicator-middle badge badge-secondary">99+</span>
+      <button class="btn">inbox</button>
+    </div>
+    <div class="indicator">
+      <span class="indicator-item indicator-end indicator-middle badge badge-secondary">99+</span>
+      <button class="btn">inbox</button>
+    </div>
+  </div>
+
+  <!-- Mask -->
+  <div>
+    <h3 class="h3">Mask</h3>
+    <div class="flex gap-2">
+      <img class="mask mask-squircle w-24" src="https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp" />
+      <img class="mask mask-hexagon w-24" src="https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp" />
+      <img class="mask mask-triangle w-24" src="https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp" />
+    </div>
+  </div>
+
+  <!-- Stack -->
+  <div>
+    <h3 class="h3">Stack</h3>
+    <div class="stack">
+      <img src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp" alt="Image 1" class="rounded" />
+      <img src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp" alt="Image 2" class="rounded" />
+      <img src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp" alt="Image 3" class="rounded" />
+    </div>
+  </div>
+</section>
+
+<!-- Mockup -->
+<section>
+  <h2 class="h2">Mockup</h2>
+
+  <!-- Browser -->
+  <div>
+    <h3 class="h3">Browser</h3>
+    <div class="mockup-browser bg-base-300 border">
+      <div class="mockup-browser-toolbar">
+        <div class="input">https://daisyui.com</div>
+      </div>
+      <div class="bg-base-200 flex justify-center px-4 py-16">Hello!</div>
+    </div>
+  </div>
+
+  <!-- Code -->
+  <div>
+    <h3 class="h3">Code</h3>
+    <div class="mockup-code">
+      <pre data-prefix="$"><code>npm i daisyui</code></pre>
+      <pre data-prefix=">" class="text-warning"><code>installing...</code></pre>
+      <pre data-prefix=">" class="text-success"><code>Done!</code></pre>
+    </div>
+  </div>
+
+  <!-- Phone -->
+  <div>
+    <h3 class="h3">Phone</h3>
+    <div class="mockup-phone">
+      <div class="camera"></div>
+      <div class="display">
+        <div class="artboard artboard-demo phone-1">Hi.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Window -->
+  <div>
+    <h3 class="h3">Window</h3>
+    <div class="mockup-window bg-base-300 border">
+      <div class="bg-base-200 flex justify-center px-4 py-16">Hello!</div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CONVERTED FROM DAISYDEMO.ERB ==================== -->
+
+<!-- Additional Components from Converted File -->
+<section>
+  <h2 class="h2">Additional Components</h2>
+
+  <!-- Form Controls with Icons -->
+  <div>
+    <h3 class="h3">Form Controls with Icons</h3>
+    <div class="form-control w-full max-w-xs">
+      <label class="label">
+        <span class="label-text">What is your name?</span>
+      </label>
+      <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+      <label class="label">
+        <span class="label-text-alt">Bottom left label</span>
+        <span class="label-text-alt">Bottom right label</span>
+      </label>
+    </div>
+
+    <label class="input input-bordered flex items-center gap-2 max-w-xs">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-4 w-4 opacity-70">
+        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z"/>
+      </svg>
+      <input type="text" class="grow" placeholder="Username" />
+    </label>
+
+    <label class="input input-bordered flex items-center gap-2 max-w-xs">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-4 w-4 opacity-70">
+        <path fill-rule="evenodd" d="M14 6a4 4 0 0 1-4.899 3.899l-1.955 1.955a.5.5 0 0 1-.353.146H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2.293a.5.5 0 0 1 .146-.353l3.955-3.955A4 4 0 1 1 14 6Zm-4-2a.75.75 0 0 0 0 1.5.5.5 0 0 1 .5.5.75.75 0 0 0 1.5 0 2 2 0 0 0-2-2Z" clip-rule="evenodd"/>
+      </svg>
+      <input type="password" class="grow" placeholder="Password" />
+    </label>
+  </div>
+
+  <!-- Advanced Cards -->
+  <div>
+    <h3 class="h3">Advanced Cards</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <!-- Registration Card -->
+      <div class="card bg-base-100 card-bordered border-base-300">
+        <div class="card-body">
+          <h2 class="card-title">Registration</h2>
+          <p class="opacity-60">Registration is free and only takes a minute</p>
+          <div class="flex flex-col gap-4">
+            <label class="input input-bordered flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-4 w-4 opacity-70">
+                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z"/>
+              </svg>
+              <input type="text" class="grow" placeholder="Username"/>
+            </label>
+            <label class="input input-bordered flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-4 w-4 opacity-70">
+                <path fill-rule="evenodd" d="M14 6a4 4 0 0 1-4.899 3.899l-1.955 1.955a.5.5 0 0 1-.353.146H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2.293a.5.5 0 0 1 .146-.353l3.955-3.955A4 4 0 1 1 14 6Zm-4-2a.75.75 0 0 0 0 1.5.5.5 0 0 1 .5.5.75.75 0 0 0 1.5 0 2 2 0 0 0-2-2Z" clip-rule="evenodd"/>
+              </svg>
+              <input type="password" class="grow" placeholder="Password"/>
+            </label>
+          </div>
+          <div class="card-actions">
+            <button class="btn btn-primary">Register</button>
+            <button class="btn btn-ghost">Login</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Orders Card -->
+      <div class="card bg-base-100 card-bordered border-base-300">
+        <div class="card-body">
+          <h2 class="card-title">
+            Recent orders
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 opacity-40">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941"/>
+            </svg>
+          </h2>
+          <div class="flex flex-col">
+            <div class="flex items-center justify-between gap-2 border-t border-dashed py-2">
+              Charlie Chapman
+              <span class="badge badge-xs badge-info">Send</span>
+            </div>
+            <div class="flex items-center justify-between gap-2 border-t border-dashed py-2">
+              Howard Hudson
+              <span class="badge badge-xs badge-error">Failed</span>
+            </div>
+            <div class="flex items-center justify-between gap-2 border-t border-dashed py-2">
+              Fiona Fisher
+              <span class="badge badge-xs badge-warning">In progress</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Advanced Stats -->
+  <div>
+    <h3 class="h3">Advanced Stats</h3>
+    <div class="stats bg-base-100 shadow">
+      <div class="stat">
+        <div class="stat-figure">
+          <div class="radial-progress" style="--value:91;--size:3rem;" role="progressbar">91</div>
+        </div>
+        <div class="stat-title">Page Score</div>
+        <div class="stat-value">91<span>/100</span></div>
+        <div class="stat-desc flex items-center gap-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-success size-4">
+            <path fill-rule="evenodd" d="M8.5 1.709a.75.75 0 0 0-1 0 8.963 8.963 0 0 1-4.84 2.217.75.75 0 0 0-.654.72 10.499 10.499 0 0 0 5.647 9.672.75.75 0 0 0 .694-.001 10.499 10.499 0 0 0 5.647-9.672.75.75 0 0 0-.654-.719A8.963 8.963 0 0 1 8.5 1.71Zm2.34 5.504a.75.75 0 0 0-1.18-.926L7.394 9.17l-1.156-.99a.75.75 0 1 0-.976 1.138l1.75 1.5a.75.75 0 0 0 1.078-.106l2.75-3.5Z" clip-rule="evenodd"/>
+          </svg>
+          All good
+        </div>
+      </div>
+      
+      <div class="stat">
+        <div class="stat-title">September Revenue</div>
+        <div class="stat-value">$32,400</div>
+        <div class="stat-desc flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-success size-4">
+            <path fill-rule="evenodd" d="M9.808 4.057a.75.75 0 0 1 .92-.527l3.116.849a.75.75 0 0 1 .528.915l-.823 3.121a.75.75 0 0 1-1.45-.382l.337-1.281a23.484 23.484 0 0 0-3.609 3.056.75.75 0 0 1-1.07.01L6 8.06l-3.72 3.72a.75.75 0 1 1-1.06-1.061l4.25-4.25a.75.75 0 0 1 1.06 0l1.756 1.755a25.015 25.015 0 0 1 3.508-2.85l-1.46-.398a.75.75 0 0 1-.526-.92Z" clip-rule="evenodd"/>
+          </svg>
+          21% more than last month
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Advanced Menu -->
+  <div>
+    <h3 class="h3">Advanced Menu</h3>
+    <ul class="menu bg-base-200 w-56 rounded-box">
+      <li class="menu-title">Admin panel</li>
+      <li>
+        <a>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"/>
+          </svg>
+          Databases
+          <span class="badge">7</span>
+        </a>
+      </li>
+      <li>
+        <a>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m21 7.5-9-5.25L3 7.5m18 0-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"/>
+          </svg>
+          Products
+        </a>
+      </li>
+      <li>
+        <a>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/>
+          </svg>
+          Messages
+          <span class="badge">29</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Advanced Chat Interface -->
+  <div>
+    <h3 class="h3">Chat Interface</h3>
+    <div class="card bg-base-100 shadow-xl max-w-md">
+      <div class="card-body">
+        <div class="chat chat-start">
+          <div class="chat-image avatar">
+            <div class="w-10 rounded-full">
+              <img alt="Avatar" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+            </div>
+          </div>
+          <div class="chat-header">
+            Obi-Wan Kenobi
+            <time class="opacity-50">12:45</time>
+          </div>
+          <div class="chat-bubble">It's over Anakin</div>
+        </div>
+        <div class="chat chat-start">
+          <div class="chat-image avatar">
+            <div class="w-10 rounded-full">
+              <img alt="Avatar" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+            </div>
+          </div>
+          <div class="chat-bubble">I have the high ground</div>
+          <div class="chat-footer opacity-50">Delivered</div>
+        </div>
+        <div class="chat chat-end">
+          <div class="chat-image avatar">
+            <div class="w-10 rounded-full">
+              <img alt="Avatar" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+            </div>
+          </div>
+          <div class="chat-bubble">You underestimate my power</div>
+          <div class="chat-footer opacity-50">Seen at 12:46</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Advanced Timeline -->
+  <div>
+    <h3 class="h3">Advanced Timeline</h3>
+    <ul class="timeline timeline-vertical">
+      <li>
+        <div class="timeline-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="text-primary h-5 w-5">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/>
+          </svg>
+        </div>
+        <div class="timeline-end timeline-box">Harry Potter and Sorcerer's Stack</div>
+        <hr class="bg-primary"/>
+      </li>
+      <li>
+        <hr class="bg-primary"/>
+        <div class="timeline-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="text-primary h-5 w-5">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/>
+          </svg>
+        </div>
+        <div class="timeline-end timeline-box">Harry Potter and Chamber of Servers</div>
+        <hr class="bg-primary"/>
+      </li>
+      <li>
+        <hr class="bg-primary"/>
+        <div class="timeline-middle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="text-primary h-5 w-5">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/>
+          </svg>
+        </div>
+        <div class="timeline-end timeline-box">Harry Potter and Prisoner of Azure</div>
+        <hr/>
+      </li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer p-10 bg-base-200 text-base-content">
+  <p>DaisyUI Components Demo - Complete Showcase</p>
+</footer>
