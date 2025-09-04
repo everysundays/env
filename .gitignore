@@ -4,13 +4,9 @@ env/node_modules/
 # User-created files that should NOT be overwritten
 env/public/css/*.css
 env/public/img/
-env/views/contact.erb
-env/views/footer.erb
-env/views/head.erb
-env/views/index.erb
-env/views/layout.erb
-env/views/price.erb
-env/views/trial.erb
+env/views/
+!env/views/index.erb.template
+!env/views/layout.erb.template
 
 # macOS
 .DS_Store
