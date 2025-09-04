@@ -1,13 +1,14 @@
 # Dependencies
+node_modules/
 env/node_modules/
 
 # User-created files that should NOT be overwritten
-env/public/css/*.css
+env/app.rb
+env/public/css/
+!env/public/css/*.template
 env/public/img/
 env/views/
-!env/views/index.erb.template
-!env/views/layout.erb.template
+!env/views/*.template
 
-# macOS
+# System files
 .DS_Store
-
