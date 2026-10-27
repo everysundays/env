@@ -45,7 +45,7 @@ ruby app.rb
 
 ```bash
 npm i
-npm run build             # to one-time generate app.css
+npm run build             # to one-time generate app.src
 ruby demo.rb              # to See examples
 ```
 
